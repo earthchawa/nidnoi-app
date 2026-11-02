@@ -1,0 +1,60 @@
+body {
+  background-color: #F7F7F7;
+  color: #4B4B4B;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* Tactile 3D Button Styles */
+.btn-3d-green {
+  background-color: #58CC02;
+  box-shadow: 0 4px 0 #58A700;
+  transition: all 0.1s ease;
+}
+.btn-3d-green:active {
+  box-shadow: 0 0px 0 #58A700;
+  transform: translateY(4px);
+}
+
+.btn-3d-blue {
+  background-color: #1CB0F6;
+  box-shadow: 0 4px 0 #1899D6;
+  transition: all 0.1s ease;
+}
+.btn-3d-blue:active {
+  box-shadow: 0 0px 0 #1899D6;
+  transform: translateY(4px);
+}
+
+.btn-3d-yellow {
+  background-color: #FFC800;
+  box-shadow: 0 4px 0 #E5B400;
+  transition: all 0.1s ease;
+}
+.btn-3d-yellow:active {
+  box-shadow: 0 0px 0 #E5B400;
+  transform: translateY(4px);
+}
+
+.btn-3d-white {
+  background-color: #FFFFFF;
+  border: 2px solid #E5E5E5;
+  box-shadow: 0 4px 0 #E5E5E5;
+  transition: all 0.1s ease;
+}
+.btn-3d-white:active {
+  box-shadow: 0 0px 0 #E5E5E5;
+  transform: translateY(4px);
+}
+
+.card-3d {
+  background-color: #FFFFFF;
+  border: 2px solid #E5E5E5;
+  box-shadow: 0 6px 0 #E5E5E5;
+}
+
+/* Hide scrollbar for clean mobile UI */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
