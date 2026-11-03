@@ -4,6 +4,11 @@
 
 ![Nidnoi App Banner](https://img.shields.io/badge/Status-Active-success) ![Tech Stack](https://img.shields.io/badge/Stack-HTML5%20%7C%20Tailwind%20CSS%20%7C%20JS-blue) ![AI Powered](https://img.shields.io/badge/AI-Gemini%203.8%20Flash-orange)
 
+
+🔗 **[Try it live → nidnoi-app.vercel.app](https://nidnoi-app.vercel.app/)**
+
+<p align="center"><img src="docs/screenshot.jpg" alt="Nidnoi daily lesson screen" width="280" /></p>
+
 ---
 
 ## ✨ Features
@@ -28,7 +33,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/nidnoi-app.git
+   git clone https://github.com/earthchawa/nidnoi-app.git
    cd nidnoi-app
    ```
 2. Run locally using **Live Server** in VS Code or any static file server (e.g., `npx serve`).
