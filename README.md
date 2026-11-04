@@ -74,6 +74,8 @@ design/prototype.html               clickable design prototype
 
 **Setup:** add a repository secret named `GEMINI_API_KEY`. Optionally set a repository variable `GEMINI_MODEL` to change the model.
 
+If Gemini is busy (HTTP 429/5xx), the script waits and retries, then moves to backup models: the newest stable Flash models your key can use, or the comma-separated list in the repository variable `GEMINI_FALLBACK_MODELS`.
+
 To run it manually, open **Actions → Daily Thai Lesson Generator (Agentic AI) → Run workflow**. Tick *force* to regenerate a lesson that already exists.
 
 To generate a lesson locally (PowerShell):
