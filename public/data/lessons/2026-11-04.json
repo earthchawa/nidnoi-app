@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-04",
+  "theme": "Condo Juristic & Parcels",
+  "context": "At the juristic office",
+  "words": [
+    {
+      "id": "20261104-1",
+      "thai": "พัสดุ",
+      "phonetic": "phát-sà-dù",
+      "tones": [
+        "high",
+        "low",
+        "low"
+      ],
+      "english": "parcel, package",
+      "category": "Noun",
+      "example": {
+        "thai": "มีพัสดุมาส่งไหมครับ",
+        "phonetic": "mii phát-sà-dù maa sòng mǎi khráp",
+        "english": "Has any parcel arrived for me?"
+      },
+      "note": "Thai condos log deliveries into parcel rooms; staff will often check an app or register for your unit."
+    },
+    {
+      "id": "20261104-2",
+      "thai": "นิติ",
+      "phonetic": "ní-dtì",
+      "tones": [
+        "high",
+        "low"
+      ],
+      "english": "juristic office, condo management",
+      "category": "Noun",
+      "example": {
+        "thai": "ติดต่อนิติได้ที่ชั้นหนึ่ง",
+        "phonetic": "dtìt-dtɔ̀ɔ ní-dtì dâai thîi chán nèung",
+        "english": "You can contact the juristic office on the first floor."
+      },
+      "note": "A spoken abbreviation of 'นิติบุคคล' (ní-dtì-bùk-khon); residents almost exclusively use this shorter form."
+    },
+    {
+      "id": "20261104-3",
+      "thai": "เลขห้อง",
+      "phonetic": "lêek-hɔ̂ng",
+      "tones": [
+        "falling",
+        "falling"
+      ],
+      "english": "room number, unit number",
+      "category": "Noun",
+      "example": {
+        "thai": "ขอเลขห้องด้วยครับ",
+        "phonetic": "khɔ̌ɔ lêek-hɔ̂ng dûai khráp",
+        "english": "May I have your room number, please?"
+      },
+      "note": "Condo staff identify residents by unit number rather than name, so have your room digits ready."
+    },
+    {
+      "id": "20261104-4",
+      "thai": "มารับ",
+      "phonetic": "maa-ráp",
+      "tones": [
+        "mid",
+        "high"
+      ],
+      "english": "to come pick up, to collect",
+      "category": "Verb",
+      "example": {
+        "thai": "มารับพัสดุครับ",
+        "phonetic": "maa ráp phát-sà-dù khráp",
+        "english": "I've come to pick up a parcel."
+      },
+      "note": "Use this straightforward phrase when you walk up to the front desk to immediately state your purpose."
+    },
+    {
+      "id": "20261104-5",
+      "thai": "เซ็นชื่อ",
+      "phonetic": "sen-chʉ̂ʉ",
+      "tones": [
+        "mid",
+        "falling"
+      ],
+      "english": "to sign one's name",
+      "category": "Verb",
+      "example": {
+        "thai": "รบกวนเซ็นชื่อตรงนี้ครับ",
+        "phonetic": "róp-kuan sen-chʉ̂ʉ dtrong níi khráp",
+        "english": "Please sign your name right here."
+      },
+      "note": "You will usually need to sign a physical logbook or digital tablet before collecting your deliveries."
+    }
+  ]
+}

@@ -6,7 +6,12 @@
 
 🔗 **[Try it live → nidnoi-app.vercel.app](https://nidnoi-app.vercel.app/)**
 
-<p align="center"><img src="docs/screenshot.jpg" alt="Nidnoi daily lesson screen" width="280" /></p>
+<p align="center">
+  <img src="docs/screenshot-today.jpg" alt="Today screen: the word อร่อยมาก with phonetics, tone chips, listen buttons and an example sentence" width="260" />
+  &nbsp;&nbsp;
+  <img src="docs/screenshot-library.jpg" alt="Library screen: past words grouped by day with search, filters and status labels" width="260" />
+</p>
+<p align="center"><sub>Today's lesson (left) and the Library of past words (right)</sub></p>
 
 ---
 
@@ -18,6 +23,15 @@
 - **Streaks that mean something:** a day counts when you finish a lesson; missing a full day resets the streak.
 - **Works offline and installs to the home screen** (service worker + web manifest).
 - **Daily AI pipeline:** GitHub Actions asks Gemini for a new lesson every morning at 07:00 ICT, validates it, and commits it.
+
+---
+
+## 🗺️ Roadmap
+
+- [x] **Phase 0 · Foundations:** React + TypeScript rebuild, new design, Today and Library screens, lesson history, streak fix, PWA, daily AI pipeline with retries and backup models
+- [ ] **Phase 1 · Real learning app:** Review tab with spaced repetition and listening, reading and recall exercises; a Me tab with stats, a study calendar and settings (hide phonetics, ครับ/ค่ะ, speech speed)
+- [ ] **Phase 2 · Thai foundations:** a Thai script and tone module, a leveled curriculum (A1 → A2) for the AI generator, daily reminders, final Noi artwork
+- [ ] **Phase 3 · Accounts:** sign-in and progress sync across devices
 
 ---
 
@@ -59,7 +73,9 @@ src/lib/db.ts, progress.ts          learner progress in IndexedDB
 src/screens/                        Today and Library screens
 scripts/generate-daily.ts           daily AI lesson generator
 scripts/check-data.ts               validates every lesson file and the index
-design/prototype.html               clickable design prototype
+scripts/retry.ts, gemini-models.ts  retries and backup models for busy Gemini APIs
+design/prototype.html               clickable design prototype (all four planned tabs)
+docs/                               README screenshots
 ```
 
 ---
@@ -73,6 +89,8 @@ design/prototype.html               clickable design prototype
 3. Commits `public/data/` to `main`, which Vercel then deploys.
 
 **Setup:** add a repository secret named `GEMINI_API_KEY`. Optionally set a repository variable `GEMINI_MODEL` to change the model.
+
+If Gemini is busy (HTTP 429/5xx), the script waits and retries, then moves to backup models: the newest stable Flash models your key can use, or the comma-separated list in the repository variable `GEMINI_FALLBACK_MODELS`.
 
 To run it manually, open **Actions → Daily Thai Lesson Generator (Agentic AI) → Run workflow**. Tick *force* to regenerate a lesson that already exists.
 
