@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-02",
+  "theme": "Everyday Thai Essentials",
+  "context": "Everyday",
+  "words": [
+    {
+      "id": "20261102-1",
+      "thai": "สวัสดี",
+      "phonetic": "sà-wàt-dii",
+      "tones": ["low", "low", "mid"],
+      "english": "Hello / Goodbye",
+      "category": "Greetings",
+      "example": {
+        "thai": "สวัสดีครับ ยินดีที่ได้รู้จัก",
+        "phonetic": "sà-wàt-dii khráp, yin-dii thîi dâai rúu-jàk",
+        "english": "Hello, nice to meet you."
+      },
+      "note": "Add 'khráp' (male speaker) or 'khâ' (female speaker) at the end to be polite."
+    },
+    {
+      "id": "20261102-2",
+      "thai": "ขอบคุณ",
+      "phonetic": "khàawp-khun",
+      "tones": ["low", "mid"],
+      "english": "Thank you",
+      "category": "Politeness",
+      "example": {
+        "thai": "ขอบคุณสำหรับความช่วยเหลือ",
+        "phonetic": "khàawp-khun sǎm-ràp khwaam chûai-lǔea",
+        "english": "Thank you for your help."
+      },
+      "note": "A slight bow of the head while saying this shows great respect."
+    },
+    {
+      "id": "20261102-3",
+      "thai": "อร่อยมาก",
+      "phonetic": "à-ròi mâak",
+      "tones": ["low", "low", "falling"],
+      "english": "Very delicious",
+      "category": "Food & Dining",
+      "example": {
+        "thai": "ผัดไทยจานนี้อร่อยมาก",
+        "phonetic": "phàt-thai jaan níi à-ròi mâak",
+        "english": "This plate of Pad Thai is very delicious."
+      },
+      "note": "Street food vendors will love hearing you say this!"
+    },
+    {
+      "id": "20261102-4",
+      "thai": "เท่าไหร่",
+      "phonetic": "thâo-rài",
+      "tones": ["falling", "low"],
+      "english": "How much?",
+      "category": "Shopping",
+      "example": {
+        "thai": "อันนี้ราคาเท่าไหร่",
+        "phonetic": "an-níi raa-khaa thâo-rài",
+        "english": "How much does this cost?"
+      },
+      "note": "Point at an item, say 'An-níi thâo-rài', and you're ready for Thai markets!"
+    },
+    {
+      "id": "20261102-5",
+      "thai": "ไม่เป็นไร",
+      "phonetic": "mâi pen rai",
+      "tones": ["falling", "mid", "mid"],
+      "english": "No problem / You're welcome",
+      "category": "Culture",
+      "example": {
+        "thai": "ไม่ต้องกังวล ไม่เป็นไร",
+        "phonetic": "mâi tâwng kang-won, mâi pen rai",
+        "english": "Don't worry, it's no problem at all."
+      },
+      "note": "Reflects the relaxed Thai mindset—used for 'It's okay' and 'You're welcome'."
+    }
+  ]
+}

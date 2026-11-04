@@ -1,0 +1,738 @@
+<title>Nidnoi Prototype</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@400;500;600;700&family=Nunito:wght@600;700;800;900&display=swap">
+<style>
+/* Layout: one phone-width column, bottom tab bar; on desktop the column sits on a tinted desk */
+:root{
+  --bg:#F2F8F5; --desk:#E3EEEA; --surface:#FFFFFF; --surface-2:#E5F3EE; --line:#D4E6DF;
+  --ink:#12332B; --ink-2:#4B6A62; --ink-3:#86A299;
+  --teal:#12937A; --teal-ink:#FFFFFF; --teal-soft:#D2F0E5; --teal-dark:#0B6A57;
+  --amber:#F0A531; --amber-soft:#FDEFD2; --amber-ink:#875000;
+  --coral:#E05C47; --coral-soft:#FCE3DD; --coral-ink:#962D1D;
+  --blue-soft:#DFEBFB; --blue-ink:#2456A6;
+  --ele:#A8BDCB; --ele-2:#8EA6B6; --ele-ink:#21384A; --ear:#F2B5B8; --leaf:#2FB27F; --drop:#7CC7EE;
+  --t-mid:#6F858C; --t-low:#3F6FD1; --t-falling:#D2741F; --t-high:#8A4FD8; --t-rising:#C7437E;
+  --focus:#F0A531;
+  --font-ui:'Nunito','Noto Sans Thai Looped',system-ui,sans-serif;
+  --font-th:'Noto Sans Thai Looped','Nunito',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0D1A16; --desk:#08120F; --surface:#14241F; --surface-2:#1A3029; --line:#27413A;
+  --ink:#E3F2EC; --ink-2:#A2BDB4; --ink-3:#6D8980;
+  --teal:#2CC29E; --teal-ink:#05261D; --teal-soft:#16392F; --teal-dark:#68DCBD;
+  --amber:#F2B24E; --amber-soft:#3A2B10; --amber-ink:#F6C978;
+  --coral:#EE7963; --coral-soft:#3C1E18; --coral-ink:#F5A797;
+  --blue-soft:#172B45; --blue-ink:#9DC2F3;
+  --ele:#93A9B8; --ele-2:#7590A2; --ele-ink:#142431; --ear:#D99A9E; --leaf:#38C18D; --drop:#69B6DE;
+  --t-mid:#98ADB3; --t-low:#7FA4F0; --t-falling:#F0A15C; --t-high:#B793F0; --t-rising:#EE80B0;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0D1A16; --desk:#08120F; --surface:#14241F; --surface-2:#1A3029; --line:#27413A;
+  --ink:#E3F2EC; --ink-2:#A2BDB4; --ink-3:#6D8980;
+  --teal:#2CC29E; --teal-ink:#05261D; --teal-soft:#16392F; --teal-dark:#68DCBD;
+  --amber:#F2B24E; --amber-soft:#3A2B10; --amber-ink:#F6C978;
+  --coral:#EE7963; --coral-soft:#3C1E18; --coral-ink:#F5A797;
+  --blue-soft:#172B45; --blue-ink:#9DC2F3;
+  --ele:#93A9B8; --ele-2:#7590A2; --ele-ink:#142431; --ear:#D99A9E; --leaf:#38C18D; --drop:#69B6DE;
+  --t-mid:#98ADB3; --t-low:#7FA4F0; --t-falling:#F0A15C; --t-high:#B793F0; --t-rising:#EE80B0;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-ui);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased}
+p{margin:0}
+h1{font-size:24px;font-weight:900;line-height:1.2;margin:0;text-wrap:balance}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+[lang="th"]{font-family:var(--font-th)}
+
+.app{max-width:440px;margin:0 auto;min-height:100%;display:flex;flex-direction:column;gap:16px;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:18px 120px}
+@media (min-width:520px){body{background:var(--desk)} .app{background:var(--bg);border-left:1px solid var(--line);border-right:1px solid var(--line)}}
+
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surface);border-top:1px solid var(--line);
+  padding:8px max(16px, env(safe-area-inset-right, 0px)) calc(8px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px))}
+.tabs-in{max-width:408px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.tab{appearance:none;border:0;background:none;color:var(--ink-3);display:flex;flex-direction:column;align-items:center;gap:2px;padding:7px 0 5px;border-radius:16px;font-size:12px;font-weight:800;cursor:pointer;position:relative}
+.tab svg{width:24px;height:24px}
+.tab[aria-current="page"]{color:var(--teal-dark);background:var(--teal-soft)}
+.badge{position:absolute;top:3px;left:calc(50% + 7px);min-width:18px;height:18px;border-radius:9px;background:var(--coral);color:#fff;font-size:11px;font-weight:900;display:grid;place-items:center;padding:0 5px}
+
+.btn{appearance:none;border:0;font-weight:800;font-size:16px;border-radius:16px;padding:14px 18px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform .12s ease, background-color .15s ease}
+.btn:active{transform:scale(.97)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-primary{background:var(--teal);color:var(--teal-ink)}
+.btn-soft{background:var(--teal-soft);color:var(--teal-dark)}
+.btn-ghost{background:var(--surface);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn-ghost[aria-pressed="true"]{color:var(--teal-dark);box-shadow:inset 0 0 0 1.5px var(--teal)}
+.btn-ghost[aria-pressed="true"] svg{fill:currentColor}
+.btn-block{width:100%}
+.stack{display:flex;flex-direction:column;gap:10px}
+
+.top{display:flex;align-items:center;gap:12px}
+.av{width:52px;height:52px;flex:none;border-radius:18px;background:var(--surface-2);display:grid;place-items:center;overflow:hidden}
+.eyebrow{font-size:13px;font-weight:800;color:var(--ink-2)}
+.streak{margin-left:auto;flex:none;display:inline-flex;align-items:center;gap:4px;background:var(--amber-soft);color:var(--amber-ink);font-weight:900;font-size:15px;padding:6px 11px 6px 8px;border-radius:999px;font-variant-numeric:tabular-nums}
+.streak svg{width:18px;height:18px;color:var(--amber)}
+.segs{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.seg{height:8px;border-radius:4px;background:var(--line);border:0;padding:0;cursor:pointer}
+.seg.done{background:var(--teal)}
+.seg.cur{background:var(--teal-soft);box-shadow:inset 0 0 0 2px var(--teal)}
+
+.card{background:var(--surface);border-radius:28px;padding:20px;border:1px solid var(--line);display:flex;flex-direction:column;gap:14px;animation:rise .28s ease-out}
+@keyframes rise{from{transform:translateY(8px);opacity:.5}to{transform:none;opacity:1}}
+.row-between{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.chip{font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px;background:var(--surface-2);color:var(--ink-2)}
+.word-th{font-size:clamp(42px,13vw,54px);font-weight:600;line-height:1.4;text-align:center;margin-top:6px}
+.word-ph{text-align:center;color:var(--teal-dark);font-weight:800;font-size:19px}
+.word-en{text-align:center;font-size:21px;font-weight:900}
+.tones{display:flex;justify-content:center;gap:6px;flex-wrap:wrap}
+.tone{--t:var(--t-mid);display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:800;padding:4px 10px 4px 7px;border-radius:999px;color:var(--t);background:color-mix(in srgb, var(--t) 15%, transparent)}
+.tone svg{width:20px;height:12px}
+.t-low{--t:var(--t-low)} .t-falling{--t:var(--t-falling)} .t-high{--t:var(--t-high)} .t-rising{--t:var(--t-rising)}
+.actions{display:grid;grid-template-columns:1fr auto auto;gap:8px}
+.icon-btn{width:52px;padding:14px 0}
+.example{background:var(--surface-2);border-radius:18px;padding:14px;display:flex;gap:10px;align-items:flex-start}
+.example > div{flex:1;min-width:0}
+.ex-label{font-size:11px;font-weight:900;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3)}
+.ex-th{font-size:18px;font-weight:500;margin-top:2px}
+.ex-ph{font-size:14px;font-weight:700;color:var(--teal-dark)}
+.ex-en{font-size:14px;color:var(--ink-2);margin-top:2px}
+.mini-say{flex:none;width:42px;height:42px;border-radius:13px;background:var(--surface);color:var(--teal-dark);border:0;display:grid;place-items:center;cursor:pointer}
+.mini-say svg{width:20px;height:20px}
+.tip{display:flex;gap:10px;align-items:flex-end}
+.tip .av{width:46px;height:46px;border-radius:16px}
+.bubble{background:var(--surface);border:1px solid var(--line);border-radius:18px 18px 18px 6px;padding:11px 14px;font-size:14px;color:var(--ink-2);font-weight:700;line-height:1.5;min-width:0}
+.bubble b{color:var(--ink);font-weight:900}
+.foot{display:grid;grid-template-columns:auto 1fr;gap:10px}
+.foot .btn-ghost{width:56px;padding:14px 0}
+
+.hero{text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;padding:12px 0 4px}
+.lead{color:var(--ink-2);font-weight:700;max-width:34ch}
+.lead b{color:var(--ink)}
+.next-row{display:flex;align-items:center;gap:12px}
+.next-row .big{font-size:28px;font-weight:900;font-variant-numeric:tabular-nums;color:var(--teal-dark);min-width:36px;text-align:center}
+.note{font-size:13px;color:var(--ink-3);font-weight:700;text-align:center}
+.word-chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.word-chips span{font-size:15px;padding:4px 10px;border-radius:10px;background:var(--surface);border:1px solid var(--line)}
+
+.rv-top{display:flex;align-items:center;gap:12px}
+.bar{flex:1;height:10px;border-radius:5px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--teal);border-radius:5px;transition:width .3s ease}
+.count{font-size:14px;font-weight:900;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.x-btn{width:40px;height:40px;border-radius:12px;border:0;background:var(--surface);box-shadow:inset 0 0 0 1.5px var(--line);color:var(--ink-2);display:grid;place-items:center;cursor:pointer}
+.x-btn svg{width:18px;height:18px}
+.q-prompt{font-size:14px;font-weight:900;color:var(--ink-2);text-align:center}
+.q-th{font-size:46px;font-weight:600;text-align:center;line-height:1.4}
+.q-en{font-size:28px;font-weight:900;text-align:center}
+.big-say{width:104px;height:104px;border-radius:50%;background:var(--teal);color:var(--teal-ink);border:0;display:grid;place-items:center;margin:4px auto;cursor:pointer;transition:transform .12s}
+.big-say:active{transform:scale(.95)}
+.big-say svg{width:44px;height:44px}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{text-align:left;background:var(--surface);border:2px solid var(--line);border-radius:18px;padding:13px 16px;font-weight:800;font-size:17px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:58px}
+.opt .opt-th{font-size:21px;font-weight:600}
+.opt small{font-size:13px;color:var(--ink-3);font-weight:700}
+.opt.right{border-color:var(--teal);background:var(--teal-soft);color:var(--teal-dark)}
+.opt.wrong{border-color:var(--coral);background:var(--coral-soft);color:var(--coral-ink)}
+.opt.dim{opacity:.55}
+.opt:disabled{cursor:default}
+.fb{border-radius:24px;padding:14px;display:flex;flex-direction:column;gap:12px;animation:rise .25s ease-out}
+.fb.ok{background:var(--teal-soft);color:var(--teal-dark)}
+.fb.no{background:var(--coral-soft);color:var(--coral-ink)}
+.fb-head{display:flex;gap:10px;align-items:center}
+.fb-head > div{flex:1;min-width:0}
+.fb-title{font-weight:900;font-size:18px}
+.fb-sub{font-weight:700;font-size:15px}
+.rate{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.rate .btn{flex-direction:column;gap:0;padding:10px 6px;font-size:15px}
+.rate small{font-size:11px;font-weight:700;opacity:.8}
+
+.search{display:flex;align-items:center;gap:8px;background:var(--surface);border:1.5px solid var(--line);border-radius:16px;padding:0 14px;color:var(--ink-3)}
+.search:focus-within{border-color:var(--teal)}
+.search svg{width:20px;height:20px;flex:none}
+.search input{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-size:16px;font-weight:700;padding:13px 0;color:var(--ink);outline:none}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.fchip{border:0;box-shadow:inset 0 0 0 1.5px var(--line);background:var(--surface);color:var(--ink-2);font-weight:800;font-size:14px;padding:8px 14px;border-radius:999px;cursor:pointer}
+.fchip[aria-pressed="true"]{background:var(--ink);color:var(--bg);box-shadow:none}
+.group{display:flex;flex-direction:column;gap:8px}
+.group-h{font-size:13px;font-weight:900;color:var(--ink-2);display:flex;justify-content:space-between;gap:8px}
+.group-h span:last-child{color:var(--ink-3)}
+.list{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.item + .item{border-top:1px solid var(--line)}
+.item-row{width:100%;display:flex;align-items:center;gap:12px;padding:11px 14px;background:none;border:0;text-align:left;cursor:pointer}
+.item-mid{flex:1;min-width:0}
+.item-th{font-size:20px;font-weight:600;line-height:1.35}
+.item-en{font-size:14px;color:var(--ink-2);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.item-en em{font-style:normal;color:var(--teal-dark)}
+.saved-dot{width:16px;height:16px;color:var(--teal);flex:none}
+.saved-dot svg{width:16px;height:16px;fill:currentColor}
+.st{font-size:11px;font-weight:900;padding:4px 9px;border-radius:999px;flex:none;text-transform:lowercase}
+.st-new{background:var(--surface-2);color:var(--ink-2)}
+.st-learning{background:var(--blue-soft);color:var(--blue-ink)}
+.st-weak{background:var(--amber-soft);color:var(--amber-ink)}
+.st-known{background:var(--teal-soft);color:var(--teal-dark)}
+.item-detail{padding:0 14px 14px;display:flex;flex-direction:column;gap:10px}
+.item-detail .tones{justify-content:flex-start}
+.empty{text-align:center;padding:18px 8px;color:var(--ink-2);font-weight:700;display:flex;flex-direction:column;align-items:center;gap:6px}
+
+.profile{display:flex;align-items:center;gap:14px}
+.profile .av{width:76px;height:76px;border-radius:24px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:12px}
+.stat b{display:block;font-size:28px;font-weight:900;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat span{font-size:12px;font-weight:800;color:var(--ink-2)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.panel-h{font-size:15px;font-weight:900}
+.heat{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.heat .dl{font-size:11px;font-weight:800;color:var(--ink-3);text-align:center}
+.hc{aspect-ratio:1;border-radius:7px;background:var(--surface-2)}
+.hc.l1{background:color-mix(in srgb, var(--teal) 35%, var(--surface-2))}
+.hc.l2{background:color-mix(in srgb, var(--teal) 65%, var(--surface-2))}
+.hc.l3{background:var(--teal)}
+.hc.fut{background:transparent;box-shadow:inset 0 0 0 1.5px var(--line)}
+.hc.now{outline:2.5px solid var(--amber);outline-offset:1px}
+.legend{display:flex;align-items:center;gap:5px;font-size:12px;font-weight:700;color:var(--ink-3);justify-content:flex-end}
+.legend .hc{width:14px;height:14px;aspect-ratio:auto;border-radius:4px}
+.set{background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.set-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px}
+.set-row + .set-row{border-top:1px solid var(--line)}
+.set-row > div:first-child{min-width:0}
+.set-t{font-weight:900;font-size:15px}
+.set-s{font-size:13px;color:var(--ink-2);font-weight:700}
+.switch{width:52px;height:32px;border-radius:16px;background:var(--line);border:0;position:relative;cursor:pointer;flex:none;transition:background-color .15s}
+.switch::after{content:"";position:absolute;top:3px;left:3px;width:26px;height:26px;border-radius:50%;background:var(--surface);transition:left .15s}
+.switch[aria-checked="true"]{background:var(--teal)}
+.switch[aria-checked="true"]::after{left:23px}
+.segctl{display:inline-flex;background:var(--surface-2);border-radius:12px;padding:3px;flex:none}
+.segctl button{border:0;background:none;font-weight:800;font-size:13px;padding:7px 11px;border-radius:9px;color:var(--ink-2);cursor:pointer;white-space:nowrap}
+.segctl button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px color-mix(in srgb, var(--ink) 18%, transparent)}
+.soon{font-size:12px;font-weight:900;color:var(--ink-3);background:var(--surface-2);padding:4px 9px;border-radius:999px;flex:none}
+.link-btn{background:none;border:0;color:var(--coral-ink);font-weight:800;font-size:14px;cursor:pointer;padding:6px;text-decoration:underline;text-underline-offset:3px}
+
+.toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom, 0px));transform:translate(-50%,10px);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:14px;font-weight:800;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s, transform .2s;max-width:calc(100% - 32px);text-align:center;z-index:30}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+.noi{display:block;overflow:visible}
+.noi-hi,.noi-happy,.noi-think{animation:bob 3.2s ease-in-out infinite}
+.noi-cheer{animation:hop .9s ease-in-out infinite;transform-origin:50% 100%}
+.noi-oops{animation:shake .5s ease-in-out 1}
+@keyframes bob{50%{transform:translateY(-3px)}}
+@keyframes hop{0%,100%{transform:translateY(0)}35%{transform:translateY(-9px) rotate(-3deg)}65%{transform:translateY(-4px) rotate(2deg)}}
+@keyframes shake{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
+.nk{fill:var(--ele-ink)}
+.nk-l{fill:none;stroke:var(--ele-ink);stroke-width:3.5;stroke-linecap:round}
+@media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}}
+</style>
+
+<main class="app" id="app"></main>
+<nav class="tabs" aria-label="Main">
+  <div class="tabs-in" id="tabs"></div>
+</nav>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const TODAY = '2026-11-03';
+
+const LESSONS = [
+  { date:'2026-11-03', theme:'Getting a Grab', ctx:'In a Grab', words:[
+    { id:'20261103-1', th:'ไปไหน', ph:'bpai nǎi', tones:['mid','rising'], en:'where to?', cat:'Questions',
+      ex:{ th:'ไปไหนครับ', ph:'bpai nǎi khráp', en:'Where to? (driver)' },
+      tip:'People also ask ไปไหน as a casual hello. <b>bpai thîao</b> (going out) is a fine vague answer.' },
+    { id:'20261103-2', th:'ตรงไป', ph:'dtrong bpai', tones:['mid','mid'], en:'go straight', cat:'Directions',
+      ex:{ th:'ตรงไปอีกนิด{P}', ph:'dtrong bpai ìik nít {p}', en:'Go straight a bit more.' },
+      tip:'Both syllables are mid tone. Keep your voice flat and relaxed.' },
+    { id:'20261103-3', th:'เลี้ยวซ้าย', ph:'líao sáai', tones:['high','high'], en:'turn left', cat:'Directions',
+      ex:{ th:'เลี้ยวซ้ายที่ไฟแดง{P}', ph:'líao sáai thîi fai daeng {p}', en:'Turn left at the traffic light.' },
+      tip:'Thailand drives on the left, so left turns are usually the quick ones.' },
+    { id:'20261103-4', th:'เลี้ยวขวา', ph:'líao khwǎa', tones:['high','rising'], en:'turn right', cat:'Directions',
+      ex:{ th:'ซอยหน้าเลี้ยวขวา{P}', ph:'sawy nâa líao khwǎa {p}', en:'Turn right at the next soi.' },
+      tip:'ขวา has a rising tone. Let your voice dip, then climb, like a surprised question.' },
+    { id:'20261103-5', th:'จอดตรงนี้', ph:'jàwt dtrong níi', tones:['low','mid','high'], en:'stop here', cat:'Requests',
+      ex:{ th:'จอดตรงนี้ได้เลย{P}', ph:'jàwt dtrong níi dâai loei {p}', en:'You can stop right here.' },
+      tip:'Add <b>dâai loei</b> to mean "right here is fine". Drivers will pull over straight away.' }
+  ]},
+  { date:'2026-11-02', theme:'Everyday essentials', ctx:'Everyday', words:[
+    { id:'20261102-1', th:'สวัสดี', ph:'sà-wàt-dii', tones:['low','low','mid'], en:'hello, goodbye', cat:'Greetings',
+      ex:{ th:'สวัสดี{P} ยินดีที่ได้รู้จัก', ph:'sà-wàt-dii {p}, yin-dii thîi dâai rúu-jàk', en:'Hello, nice to meet you.' },
+      tip:'End with <b>khráp</b> or <b>khâ</b> to sound polite. You can switch which one in Me.' },
+    { id:'20261102-2', th:'ขอบคุณ', ph:'khàawp-khun', tones:['low','mid'], en:'thank you', cat:'Politeness',
+      ex:{ th:'ขอบคุณสำหรับความช่วยเหลือ{P}', ph:'khàawp-khun sǎm-ràp khwaam chûai-lǔea {p}', en:'Thank you for your help.' },
+      tip:'A small nod while you say it reads as warm and respectful.' },
+    { id:'20261102-3', th:'อร่อยมาก', ph:'à-ròi mâak', tones:['low','low','falling'], en:'very tasty', cat:'Food',
+      ex:{ th:'ผัดไทยจานนี้อร่อยมาก{P}', ph:'phàt-thai jaan níi à-ròi mâak {p}', en:'This pad thai is really good.' },
+      tip:'Say it to a street vendor and you will get a big smile back.' },
+    { id:'20261102-4', th:'เท่าไหร่', ph:'thâo-rài', tones:['falling','low'], en:'how much?', cat:'Shopping',
+      ex:{ th:'อันนี้เท่าไหร่{Q}', ph:'an níi thâo-rài {q}', en:'How much is this one?' },
+      tip:'Point and ask <b>an níi thâo-rài</b>. At markets the first price is often a starting point.' },
+    { id:'20261102-5', th:'ไม่เป็นไร', ph:'mâi bpen rai', tones:['falling','mid','mid'], en:'never mind, it’s fine', cat:'Politeness',
+      ex:{ th:'ไม่เป็นไร{P} ไม่ต้องขอโทษ', ph:'mâi bpen rai {p}, mâi dtâwng khǎw-thôht', en:'It’s fine, no need to apologize.' },
+      tip:'Also works as "you’re welcome". Probably the most useful phrase in Thailand.' }
+  ]},
+  { date:'2026-11-01', theme:'7-Eleven run', ctx:'At 7-Eleven', words:[
+    { id:'20261101-1', th:'ถุง', ph:'thǔng', tones:['rising'], en:'bag', cat:'Shopping',
+      ex:{ th:'ไม่เอาถุง{P}', ph:'mâi ao thǔng {p}', en:'No bag, thanks.' },
+      tip:'Many shops no longer give free bags, so carry your own.' },
+    { id:'20261101-2', th:'อุ่นด้วย', ph:'ùn dûai', tones:['low','falling'], en:'heat it up, please', cat:'Requests',
+      ex:{ th:'ข้าวกล่องนี้อุ่นด้วย{P}', ph:'khâao glàwng níi ùn dûai {p}', en:'Please heat up this boxed meal.' },
+      tip:'Staff often ask <b>ùn mǎi</b> (heat it?) for frozen meals. Answer <b>ùn dûai</b>.' },
+    { id:'20261101-3', th:'หลอด', ph:'làwt', tones:['low'], en:'straw', cat:'Shopping',
+      ex:{ th:'ขอหลอดด้วย{P}', ph:'khǎw làwt dûai {p}', en:'A straw too, please.' },
+      tip:'<b>dûai</b> at the end turns a word into a soft request.' },
+    { id:'20261101-4', th:'เงินทอน', ph:'ngoen thawn', tones:['mid','mid'], en:'change (money)', cat:'Money',
+      ex:{ th:'นี่เงินทอนค่ะ', ph:'nîi ngoen thawn khâ', en:'Here’s your change. (cashier)' },
+      tip:'Change goes back into your hand. A quick <b>khàawp-khun</b> is all you need.' },
+    { id:'20261101-5', th:'จ่ายเงิน', ph:'jàai ngoen', tones:['low','mid'], en:'to pay', cat:'Money',
+      ex:{ th:'จ่ายเงินสดหรือสแกนคะ', ph:'jàai ngoen sòt rǔe sà-kaen khá', en:'Cash or scan? (cashier)' },
+      tip:'<b>sà-kaen</b> means paying by QR code with a Thai bank app.' }
+  ]}
+];
+const ALL = LESSONS.flatMap(L => L.words.map(w => ({...w, lesson:L})));
+const BY = Object.fromEntries(ALL.map(w => [w.id, w]));
+const TOD = LESSONS[0];
+const BASE_STREAK = 12;
+const ACTIVE = new Set(['2026-10-06','2026-10-07','2026-10-08','2026-10-13','2026-10-15','2026-10-16']);
+for (let d = 22; d <= 31; d++) ACTIVE.add('2026-10-' + d);
+ACTIVE.add('2026-11-01'); ACTIVE.add('2026-11-02');
+
+const KEY = 'nidnoi-proto-v1';
+const fresh = () => ({
+  idx:0, learned:[], browse:false,
+  saved:['20261102-4','20261101-2'],
+  srs:{
+    '20261101-1':{s:'known',due:'2026-11-09'}, '20261101-2':{s:'weak',due:TODAY},
+    '20261101-3':{s:'known',due:'2026-11-07'}, '20261101-4':{s:'learning',due:TODAY},
+    '20261101-5':{s:'learning',due:TODAY},     '20261102-1':{s:'known',due:'2026-11-10'},
+    '20261102-2':{s:'known',due:'2026-11-08'}, '20261102-3':{s:'learning',due:TODAY},
+    '20261102-4':{s:'weak',due:TODAY},         '20261102-5':{s:'learning',due:TODAY}
+  },
+  settings:{ phon:true, voice:'m', slow:false }
+});
+let S;
+try { S = JSON.parse(localStorage.getItem(KEY)) || fresh(); } catch (e) { S = fresh(); }
+if (!S.srs || !S.settings) S = fresh();
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} };
+
+let tab = ['today','review','library','me'].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'today';
+let R = null;
+const lib = { q:'', f:'all', open:null };
+
+const pad = n => String(n).padStart(2,'0');
+const iso = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+const addDays = (s, n) => { const d = new Date(s + 'T00:00:00'); d.setDate(d.getDate() + n); return iso(d); };
+const DN = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], MN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const fmt = s => { const d = new Date(s + 'T00:00:00'); return `${DN[d.getDay()]} ${d.getDate()} ${MN[d.getMonth()]}`; };
+const esc = s => s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const shuffle = a => { a = [...a]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const fold = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
+const done = () => S.learned.length === TOD.words.length;
+const streak = () => BASE_STREAK + (done() ? 1 : 0);
+const status = id => (S.srs[id] && S.srs[id].s) || 'new';
+const dueIds = () => Object.keys(S.srs).filter(id => S.srs[id].due <= TODAY);
+const particle = s => {
+  const m = S.settings.voice === 'm';
+  return s.replace(/\{P\}/g, m ? 'ครับ' : 'ค่ะ').replace(/\{Q\}/g, m ? 'ครับ' : 'คะ')
+          .replace(/\{p\}/g, m ? 'khráp' : 'khâ').replace(/\{q\}/g, m ? 'khráp' : 'khá');
+};
+
+const sv = (d, extra='') => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ${extra}>${d}</svg>`;
+const ic = {
+  sun: sv('<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/>'),
+  cards: sv('<rect x="3" y="7" width="14" height="14" rx="3"/><path d="M7.5 3.5H18a2.5 2.5 0 0 1 2.5 2.5v10.5"/>'),
+  books: sv('<path d="M4.5 4h4v16h-4zM10.5 4h4v16h-4zM16.6 5.2l3.6 1-3.9 14.3-3.6-1"/>'),
+  me: sv('<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.2 8-6.2s8 2.2 8 6.2"/>'),
+  speaker: sv('<path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M16 9a4.2 4.2 0 0 1 0 6M18.6 6.4a8 8 0 0 1 0 11.2"/>'),
+  bookmark: sv('<path d="M7 3.5h10a1 1 0 0 1 1 1V21l-6-4.2L6 21V4.5a1 1 0 0 1 1-1z"/>'),
+  flame: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5c.6 3.6 5.6 5.6 5.6 11a5.6 5.6 0 0 1-11.2 0c0-2.6 1.4-4.5 2.7-5.6.1 1.8.9 3 2 3.4-.4-3.2-.2-6 .9-8.8z"/></svg>',
+  left: sv('<path d="M15 5l-7 7 7 7"/>'),
+  x: sv('<path d="M6 6l12 12M18 6 6 18"/>'),
+  search: sv('<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>')
+};
+const TONE = { mid:'M2 6h16', low:'M2 8.5 18 10', falling:'M2 5Q8 0 18 11', high:'M2 4Q12 3.5 18 1', rising:'M2 7Q8 12 18 1' };
+const toneChips = w => {
+  const syl = w.ph.split(/[\s-]+/);
+  return w.tones.map((t, i) => `<span class="tone t-${t}" title="${t} tone"><svg viewBox="0 0 20 12" aria-hidden="true"><path d="${TONE[t]}" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>${S.settings.phon ? syl[i] + '<span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">, ' + t + ' tone</span>' : t}</span>`).join('');
+};
+
+function noi(mood, size) {
+  const trunk = { cheer:'M60 70C60 86 79 90 86 74', hi:'M60 70C60 88 70 95 80 88', oops:'M60 70C60 90 54 100 44 97' }[mood] || 'M60 70C59 88 64 99 76 98';
+  let eyes;
+  if (mood === 'happy' || mood === 'cheer') eyes = '<path class="nk-l" d="M42 56q6-7 12 0M66 56q6-7 12 0"/>';
+  else if (mood === 'sleepy') eyes = '<path class="nk-l" d="M42 55q6 5 12 0M66 55q6 5 12 0"/>';
+  else {
+    const dx = mood === 'think' ? 2 : 0, dy = mood === 'think' ? -3 : 0;
+    eyes = `<circle class="nk" cx="${48+dx}" cy="${54+dy}" r="4.8"/><circle class="nk" cx="${72+dx}" cy="${54+dy}" r="4.8"/><circle cx="${49.7+dx}" cy="${52.3+dy}" r="1.6" fill="#fff"/><circle cx="${73.7+dx}" cy="${52.3+dy}" r="1.6" fill="#fff"/>`;
+    if (mood === 'oops') eyes += '<path class="nk-l" style="stroke-width:2.6" d="M42 44l9 2.5M78 44l-9 2.5"/>';
+  }
+  const spark = (x, y, s) => `<path transform="translate(${x} ${y}) scale(${s})" d="M0-6 1.6-1.6 6 0 1.6 1.6 0 6-1.6 1.6-6 0-1.6-1.6z" fill="var(--amber)"/>`;
+  const extra = {
+    cheer: spark(10,20,1.3) + spark(108,24,1) + spark(110,94,.8) + spark(8,92,.7),
+    oops: '<path d="M99 30q6 8 0 12q-6-4 0-12z" fill="var(--drop)"/>',
+    sleepy: '<text x="94" y="30" font-size="15" font-weight="900" fill="var(--ink-3)" font-family="Nunito,sans-serif">z</text><text x="104" y="17" font-size="11" font-weight="900" fill="var(--ink-3)" font-family="Nunito,sans-serif">z</text>',
+    think: '<circle cx="95" cy="30" r="2.6" fill="var(--ink-3)"/><circle cx="102" cy="21" r="3.6" fill="var(--ink-3)"/><circle cx="111" cy="10" r="4.6" fill="var(--ink-3)"/>'
+  }[mood] || '';
+  const label = { hi:'waving hello', happy:'smiling', cheer:'cheering', oops:'looking worried', sleepy:'asleep', think:'thinking' }[mood];
+  return `<svg class="noi noi-${mood}" viewBox="0 0 120 112" width="${size}" height="${Math.round(size * 112 / 120)}" role="img" aria-label="Noi the elephant, ${label}">
+    <ellipse cx="25" cy="58" rx="22" ry="27" fill="var(--ele-2)"/><ellipse cx="95" cy="58" rx="22" ry="27" fill="var(--ele-2)"/>
+    <ellipse cx="27" cy="59" rx="13" ry="17" fill="var(--ear)"/><ellipse cx="93" cy="59" rx="13" ry="17" fill="var(--ear)"/>
+    <circle cx="60" cy="54" r="33" fill="var(--ele)"/>
+    <path d="${trunk}" fill="none" stroke="var(--ele)" stroke-width="14" stroke-linecap="round"/>
+    <ellipse cx="40" cy="67" rx="6.5" ry="4" fill="var(--ear)"/><ellipse cx="80" cy="67" rx="6.5" ry="4" fill="var(--ear)"/>
+    ${eyes}
+    <path d="M60 22c0-5 1-9 4-12" stroke="var(--leaf)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M63 11c5-6 12-6 16-3-4 6-11 7-16 3z" fill="var(--leaf)"/>
+    ${extra}
+  </svg>`;
+}
+
+let voiceWarned = false;
+function say(text, slow) {
+  try {
+    const ss = window.speechSynthesis;
+    if (!ss) { toast('Audio isn’t available in this browser'); return; }
+    ss.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'th-TH';
+    u.rate = slow ? 0.55 : (S.settings.slow ? 0.7 : 0.9);
+    const v = ss.getVoices().find(v => /^th/i.test(v.lang));
+    if (v) u.voice = v;
+    else if (!voiceWarned) { voiceWarned = true; toast('No Thai voice on this device, so audio may sound off'); }
+    ss.speak(u);
+  } catch (e) { toast('Audio isn’t available here'); }
+}
+try { speechSynthesis.getVoices(); speechSynthesis.addEventListener('voiceschanged', () => {}); } catch (e) {}
+
+let toastT;
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+function exampleBlock(w) {
+  return `<div class="example"><div>
+      <div class="ex-label">${w.lesson.ctx}</div>
+      <p class="ex-th" lang="th">${particle(w.ex.th)}</p>
+      ${S.settings.phon ? `<p class="ex-ph">${particle(w.ex.ph)}</p>` : ''}
+      <p class="ex-en">${w.ex.en}</p>
+    </div><button class="mini-say" data-act="sayex" data-id="${w.id}" aria-label="Play example sentence">${ic.speaker}</button></div>`;
+}
+
+/* ---------- Today ---------- */
+function viewToday() {
+  const head = `<header class="top"><div class="av">${noi('hi', 46)}</div>
+    <div style="min-width:0"><div class="eyebrow">Day ${streak() + (done() ? 0 : 1)} · ${fmt(TODAY)}</div><h1>${TOD.theme}</h1></div>
+    <div class="streak" title="Day streak">${ic.flame}${streak()}</div></header>`;
+
+  if (done() && !S.browse) {
+    const n = dueIds().length;
+    return head + `
+      <section class="hero">${noi('cheer', 150)}
+        <h1>Lesson done</h1>
+        <p class="lead">You learned 5 words for <b>${TOD.theme}</b>. They’re in your library and come back for review tomorrow.</p>
+        <div class="streak" style="margin:4px 0 0">${ic.flame}${streak()} day streak</div>
+      </section>
+      <section class="card">
+        ${n ? `<div class="next-row"><span class="big">${n}</span><div><p class="set-t">cards due for review</p><p class="set-s">Older words you’re about to forget</p></div></div>
+               <button class="btn btn-primary btn-block" data-act="startReview">Start review</button>`
+            : `<div class="next-row"><span class="big">0</span><div><p class="set-t">cards left to review</p><p class="set-s">You’ve cleared today’s review</p></div></div>
+               <button class="btn btn-primary btn-block" data-act="tab" data-tab="library">Browse library</button>`}
+        <button class="btn btn-ghost btn-block" data-act="browse">Go over today’s words</button>
+      </section>
+      <p class="note">Next lesson unlocks ${fmt(addDays(TODAY, 1))} at 07:00</p>`;
+  }
+
+  const w = TOD.words[S.idx];
+  const isSaved = S.saved.includes(w.id);
+  const segs = TOD.words.map((x, i) => `<button class="seg ${S.learned.includes(x.id) ? 'done' : ''} ${i === S.idx ? 'cur' : ''}" data-act="goto" data-i="${i}" aria-label="Word ${i + 1}"></button>`).join('');
+  const last = S.idx === TOD.words.length - 1;
+  const label = S.browse ? (last ? 'Finish' : 'Next') : (S.learned.includes(w.id) ? 'Next word' : 'Got it');
+  return head + `
+    <div class="segs">${segs}</div>
+    <article class="card" aria-label="Word ${S.idx + 1} of 5">
+      <div class="row-between"><span class="chip">${w.cat}</span><span class="chip">${S.idx + 1} of 5</span></div>
+      <p class="word-th" lang="th">${w.th}</p>
+      ${S.settings.phon ? `<p class="word-ph">${w.ph}</p>` : ''}
+      <div class="tones">${toneChips(w)}</div>
+      <p class="word-en">${w.en}</p>
+      <div class="actions">
+        <button class="btn btn-soft" data-act="say" data-id="${w.id}">${ic.speaker}Listen</button>
+        <button class="btn btn-ghost" data-act="slow" data-id="${w.id}">Slow</button>
+        <button class="btn btn-ghost icon-btn" data-act="save" data-id="${w.id}" aria-pressed="${isSaved}" aria-label="Save word">${ic.bookmark}</button>
+      </div>
+      ${exampleBlock({...w, lesson:TOD})}
+    </article>
+    <div class="tip"><div class="av">${noi('happy', 40)}</div><p class="bubble"><b>Noi’s tip</b><br>${w.tip}</p></div>
+    <div class="foot">
+      <button class="btn btn-ghost" data-act="prev" aria-label="Previous word">${ic.left}</button>
+      <button class="btn btn-primary" data-act="got">${label}</button>
+    </div>`;
+}
+
+/* ---------- Review ---------- */
+function makeQ(id, type, retry) {
+  const w = BY[id];
+  const pool = shuffle(ALL.filter(x => x.id !== id && x.en !== w.en)).slice(0, 2).map(x => x.id);
+  return { id, type, retry: !!retry, opts: shuffle([id, ...pool]) };
+}
+function startReview(practice) {
+  let ids = practice ? shuffle(ALL.filter(w => status(w.id) !== 'new').map(w => w.id)).slice(0, 5) : shuffle(dueIds());
+  R = { practice, q: ids.map((id, i) => makeQ(id, i % 3)), i: 0, first: ids.length, right: 0, ans: null, done: false };
+  tab = 'review'; render();
+  autoListen();
+}
+function autoListen() { const q = R && !R.done && R.q[R.i]; if (q && q.type === 0) setTimeout(() => say(BY[q.id].th), 250); }
+
+function viewReview() {
+  if (!R) {
+    const due = dueIds();
+    if (!due.length) return `
+      <section class="hero" style="padding-top:28px">${noi('sleepy', 140)}
+        <h1>All caught up</h1>
+        <p class="lead">Cards come back when they’re due. Want a quick extra round anyway?</p></section>
+      <button class="btn btn-soft btn-block" data-act="practice">Practice 5 words</button>`;
+    return `
+      <section class="hero" style="padding-top:20px">${noi('think', 140)}
+        <h1>${due.length} cards to review</h1>
+        <p class="lead">Words from earlier lessons, picked because you’re about to forget them.</p>
+        <div class="word-chips">${due.map(id => `<span lang="th">${BY[id].th}</span>`).join('')}</div></section>
+      <button class="btn btn-primary btn-block" data-act="startReview">Start review</button>
+      <p class="note">About ${Math.max(1, Math.round(due.length * 0.4))} minutes · listening, reading and recall</p>`;
+  }
+  if (R.done) {
+    const pct = R.first ? R.right / R.first : 1;
+    return `
+      <section class="hero" style="padding-top:20px">${noi(pct >= 0.6 ? 'cheer' : 'happy', 140)}
+        <h1>${R.practice ? 'Practice done' : 'Review done'}</h1>
+        <p class="lead"><b>${R.right} of ${R.first}</b> right on the first try. ${pct >= 0.8 ? 'Your memory is in good shape.' : 'Missed words come back sooner so they stick.'}</p></section>
+      <div class="stack">
+        <button class="btn btn-primary btn-block" data-act="tab" data-tab="today">Back to today</button>
+        <button class="btn btn-ghost btn-block" data-act="weak">See weak words</button>
+      </div>`;
+  }
+  const q = R.q[R.i], w = BY[q.id], a = R.ans;
+  const top = `<div class="rv-top"><button class="x-btn" data-act="quit" aria-label="End review">${ic.x}</button>
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${R.q.length}" aria-valuenow="${R.i}"><i style="width:${R.i / R.q.length * 100}%"></i></div>
+    <span class="count">${R.i + 1}/${R.q.length}</span></div>`;
+  let prompt;
+  if (q.type === 0) prompt = `<p class="q-prompt">Listen and pick the meaning</p>
+    <button class="big-say" data-act="say" data-id="${w.id}" aria-label="Play the word">${ic.speaker}</button>
+    ${a ? `<p class="q-th" lang="th" style="font-size:32px">${w.th}</p>` : ''}`;
+  else if (q.type === 1) prompt = `<p class="q-prompt">What does this mean?</p>
+    <p class="q-th" lang="th">${w.th}</p>${S.settings.phon ? `<p class="word-ph">${w.ph}</p>` : ''}`;
+  else prompt = `<p class="q-prompt">How do you say this in Thai?</p><p class="q-en">${w.en}</p>`;
+
+  const opts = q.opts.map(id => {
+    const o = BY[id];
+    let cls = '';
+    if (a) cls = id === q.id ? 'right' : (id === a ? 'wrong' : 'dim');
+    const body = q.type === 2
+      ? `<span><span class="opt-th" lang="th">${o.th}</span>${S.settings.phon ? `<br><small>${o.ph}</small>` : ''}</span>`
+      : `<span>${o.en}</span>`;
+    return `<button class="opt ${cls}" data-act="ans" data-id="${id}" ${a ? 'disabled' : ''}>${body}</button>`;
+  }).join('');
+
+  let fb = '';
+  if (a) {
+    const ok = a === q.id;
+    const line = `<p class="fb-sub"><span lang="th">${w.th}</span> · ${w.ph} · ${w.en}</p>`;
+    fb = ok ? `<div class="fb ok"><div class="fb-head">${noi('cheer', 54)}<div><p class="fb-title" lang="th">เก่งมาก <span lang="en">· nice one</span></p>${line}</div>
+        <button class="mini-say" data-act="say" data-id="${w.id}" aria-label="Play the word">${ic.speaker}</button></div>
+        ${R.practice ? `<button class="btn btn-primary btn-block" data-act="rate" data-r="none">Continue</button>`
+        : `<div class="rate">
+            <button class="btn btn-ghost" data-act="rate" data-r="hard">Hard<small>tomorrow</small></button>
+            <button class="btn btn-primary" data-act="rate" data-r="good">Good<small>in 3 days</small></button>
+            <button class="btn btn-ghost" data-act="rate" data-r="easy">Easy<small>in a week</small></button></div>`}</div>`
+      : `<div class="fb no"><div class="fb-head">${noi('oops', 54)}<div><p class="fb-title">Not quite</p>${line}</div>
+        <button class="mini-say" data-act="say" data-id="${w.id}" aria-label="Play the word">${ic.speaker}</button></div>
+        <button class="btn btn-ghost btn-block" data-act="again">Continue · you’ll see it again</button></div>`;
+  }
+  return top + `<section class="card" style="gap:10px;padding-block:22px">${prompt}</section><div class="opts">${opts}</div>${fb}`;
+}
+
+/* ---------- Library ---------- */
+function viewLibrary() {
+  const learned = ALL.filter(w => status(w.id) !== 'new').length;
+  const f = (k, l) => `<button class="fchip" data-act="filter" data-f="${k}" aria-pressed="${lib.f === k}">${l}</button>`;
+  return `<header><div class="eyebrow">${learned} words learned across ${LESSONS.length} lessons</div><h1>Library</h1></header>
+    <label class="search">${ic.search}<input id="lib-search" type="search" placeholder="Search Thai, sounds or English" value="${esc(lib.q)}" autocomplete="off"></label>
+    <div class="filters">${f('all', 'All')}${f('saved', 'Saved')}${f('weak', 'Weak')}${f('known', 'Known')}</div>
+    <div id="lib-list" class="stack" style="gap:18px">${libList()}</div>`;
+}
+function libList() {
+  const q = fold(lib.q.trim());
+  const keep = w => {
+    if (lib.f === 'saved' && !S.saved.includes(w.id)) return false;
+    if (lib.f === 'weak' && status(w.id) !== 'weak') return false;
+    if (lib.f === 'known' && status(w.id) !== 'known') return false;
+    return !q || w.th.includes(lib.q.trim()) || fold(w.ph).includes(q) || fold(w.en).includes(q);
+  };
+  const groups = LESSONS.map(L => {
+    const words = L.words.map(w => ({...w, lesson:L})).filter(keep);
+    if (!words.length) return '';
+    const when = L.date === TODAY ? 'Today' : L.date === addDays(TODAY, -1) ? 'Yesterday' : fmt(L.date);
+    return `<section class="group"><h2 class="group-h"><span>${when} · ${L.theme}</span><span>${words.length} ${words.length === 1 ? 'word' : 'words'}</span></h2>
+      <div class="list">${words.map(item).join('')}</div></section>`;
+  }).join('');
+  if (groups) return groups;
+  const msg = lib.q.trim() ? `No words match “${esc(lib.q.trim())}”.`
+    : lib.f === 'saved' ? 'Tap the bookmark on any word to keep it here.'
+    : lib.f === 'weak' ? 'No weak words right now. Nice work.' : 'Finish a review to move words to known.';
+  return `<div class="empty">${noi('think', 90)}<p>${msg}</p></div>`;
+}
+function item(w) {
+  const st = status(w.id), open = lib.open === w.id, sv = S.saved.includes(w.id);
+  return `<div class="item"><button class="item-row" data-act="open" data-id="${w.id}" aria-expanded="${open}">
+      <div class="item-mid"><div class="item-th" lang="th">${w.th}</div><div class="item-en">${S.settings.phon ? `<em>${w.ph}</em> · ` : ''}${w.en}</div></div>
+      ${sv ? `<span class="saved-dot" aria-label="Saved">${ic.bookmark}</span>` : ''}
+      <span class="st st-${st}">${st}</span></button>
+    ${open ? `<div class="item-detail"><div class="tones">${toneChips(w)}</div>${exampleBlock(w)}
+      <div class="actions" style="grid-template-columns:1fr auto">
+        <button class="btn btn-soft" data-act="say" data-id="${w.id}">${ic.speaker}Listen</button>
+        <button class="btn btn-ghost icon-btn" data-act="save" data-id="${w.id}" aria-pressed="${sv}" aria-label="Save word">${ic.bookmark}</button>
+      </div></div>` : ''}</div>`;
+}
+
+/* ---------- Me ---------- */
+function viewMe() {
+  const learned = ALL.filter(w => status(w.id) !== 'new').length;
+  const known = ALL.filter(w => status(w.id) === 'known').length;
+  const start = new Date(2026, 9, 5);
+  let cells = ['M','T','W','T','F','S','S'].map(d => `<span class="dl">${d}</span>`).join('');
+  for (let i = 0; i < 35; i++) {
+    const d = new Date(start); d.setDate(d.getDate() + i);
+    const s = iso(d);
+    let cls = '';
+    if (s > TODAY) cls = 'fut';
+    else if (s === TODAY) cls = (done() ? 'l3 ' : '') + 'now';
+    else if (ACTIVE.has(s)) cls = 'l' + (1 + (d.getDate() * 7) % 3);
+    cells += `<span class="hc ${cls}" title="${fmt(s)}"></span>`;
+  }
+  const seg = (act, val, cur, l) => `<button data-act="${act}" data-v="${val}" aria-pressed="${cur === val}">${l}</button>`;
+  return `<header class="profile"><div class="av">${noi('happy', 70)}</div>
+      <div><div class="eyebrow">Learning Thai with Noi</div><h1>Your progress</h1></div></header>
+    <div class="stats">
+      <div class="stat"><b>${streak()}</b><span>day streak</span></div>
+      <div class="stat"><b>${learned}</b><span>words learned</span></div>
+      <div class="stat"><b>${known}</b><span>words known</span></div>
+    </div>
+    <section class="panel"><div class="row-between"><h2 class="panel-h" style="margin:0">Last 5 weeks</h2>
+      <div class="legend">less<span class="hc"></span><span class="hc l1"></span><span class="hc l2"></span><span class="hc l3"></span>more</div></div>
+      <div class="heat">${cells}</div></section>
+    <section class="set">
+      <div class="set-row"><div><p class="set-t">Show sounds</p><p class="set-s">Turn off to practice reading Thai script</p></div>
+        <button class="switch" role="switch" aria-checked="${S.settings.phon}" data-act="phon" aria-label="Show sounds"></button></div>
+      <div class="set-row"><div><p class="set-t">I speak as</p><p class="set-s">Sets the polite ending in examples</p></div>
+        <div class="segctl">${seg('voice', 'm', S.settings.voice, 'ครับ khráp')}${seg('voice', 'f', S.settings.voice, 'ค่ะ khâ')}</div></div>
+      <div class="set-row"><div><p class="set-t">Listening speed</p></div>
+        <div class="segctl">${seg('speed', 'n', S.settings.slow ? 's' : 'n', 'Normal')}${seg('speed', 's', S.settings.slow ? 's' : 'n', 'Slow')}</div></div>
+      <div class="set-row"><div><p class="set-t">Daily reminder</p><p class="set-s">07:30 every morning</p></div><span class="soon">Soon</span></div>
+    </section>
+    <p class="note">Prototype with sample lessons from 1 to 3 Nov. Progress is saved in this browser only.</p>
+    <div style="text-align:center"><button class="link-btn" data-act="reset" id="reset-btn">Reset prototype</button></div>`;
+}
+
+/* ---------- Shell ---------- */
+const TABS = [['today', 'Today', ic.sun], ['review', 'Review', ic.cards], ['library', 'Library', ic.books], ['me', 'Me', ic.me]];
+function render() {
+  const app = document.getElementById('app');
+  app.innerHTML = { today:viewToday, review:viewReview, library:viewLibrary, me:viewMe }[tab]();
+  const n = dueIds().length;
+  document.getElementById('tabs').innerHTML = TABS.map(([k, l, i]) =>
+    `<button class="tab" data-act="tab" data-tab="${k}" ${k === tab ? 'aria-current="page"' : ''}>${i}${l}${k === 'review' && n ? `<span class="badge" aria-label="${n} due">${n}</span>` : ''}</button>`).join('');
+  if (tab === 'library') {
+    const inp = document.getElementById('lib-search');
+    inp.addEventListener('input', () => { lib.q = inp.value; lib.open = null; document.getElementById('lib-list').innerHTML = libList(); });
+  }
+}
+function go(t) { tab = t; try { history.replaceState(null, '', '#' + t); } catch (e) {} render(); window.scrollTo(0, 0); }
+
+let resetArmed = 0;
+const act = {
+  tab: b => go(b.dataset.tab),
+  say: b => say(BY[b.dataset.id].th),
+  slow: b => say(BY[b.dataset.id].th, true),
+  sayex: b => say(particle(BY[b.dataset.id].ex.th)),
+  save: b => {
+    const id = b.dataset.id, i = S.saved.indexOf(id);
+    if (i < 0) { S.saved.push(id); toast('Saved to your library'); } else { S.saved.splice(i, 1); toast('Removed from saved'); }
+    save(); render();
+  },
+  goto: b => { S.idx = +b.dataset.i; save(); render(); },
+  prev: () => { S.idx = (S.idx + TOD.words.length - 1) % TOD.words.length; save(); render(); },
+  got: () => {
+    const w = TOD.words[S.idx];
+    if (S.browse) {
+      if (S.idx === TOD.words.length - 1) { S.browse = false; S.idx = 0; } else S.idx++;
+      save(); render(); window.scrollTo(0, 0); return;
+    }
+    if (!S.learned.includes(w.id)) S.learned.push(w.id);
+    if (done()) {
+      TOD.words.forEach(x => { if (!S.srs[x.id]) S.srs[x.id] = { s:'learning', due:addDays(TODAY, 1) }; });
+      S.idx = 0;
+    } else {
+      for (let k = 1; k <= TOD.words.length; k++) {
+        const j = (S.idx + k) % TOD.words.length;
+        if (!S.learned.includes(TOD.words[j].id)) { S.idx = j; break; }
+      }
+    }
+    save(); render(); window.scrollTo(0, 0);
+  },
+  browse: () => { S.browse = true; S.idx = 0; save(); render(); window.scrollTo(0, 0); },
+  startReview: () => startReview(false),
+  practice: () => startReview(true),
+  quit: () => { R = null; render(); },
+  ans: b => {
+    const q = R.q[R.i]; R.ans = b.dataset.id;
+    const ok = R.ans === q.id;
+    if (ok) { if (!q.retry) R.right++; say(BY[q.id].th); }
+    render();
+  },
+  again: () => {
+    const q = R.q[R.i];
+    if (!R.practice) S.srs[q.id] = { s:'weak', due:TODAY };
+    R.q.push(makeQ(q.id, (q.type + 1) % 3, true));
+    next();
+  },
+  rate: b => {
+    const q = R.q[R.i], r = b.dataset.r;
+    if (!R.practice && r !== 'none') {
+      const cur = status(q.id);
+      let s, days;
+      if (r === 'hard') { s = cur === 'weak' ? 'weak' : 'learning'; days = 1; }
+      else if (r === 'good') { s = (cur === 'learning' || cur === 'known') && !q.retry ? 'known' : 'learning'; days = 3; }
+      else { s = 'known'; days = 7; }
+      S.srs[q.id] = { s, due:addDays(TODAY, days) };
+    }
+    next();
+  },
+  weak: () => { lib.f = 'weak'; lib.q = ''; R = null; go('library'); },
+  filter: b => { lib.f = b.dataset.f; lib.open = null; render(); },
+  open: b => { lib.open = lib.open === b.dataset.id ? null : b.dataset.id; render(); },
+  phon: () => { S.settings.phon = !S.settings.phon; save(); render(); },
+  voice: b => { S.settings.voice = b.dataset.v; save(); render(); },
+  speed: b => { S.settings.slow = b.dataset.v === 's'; save(); render(); },
+  reset: b => {
+    if (Date.now() - resetArmed < 3000) {
+      S = fresh(); R = null; lib.f = 'all'; lib.q = ''; save(); go('today'); toast('Prototype reset'); return;
+    }
+    resetArmed = Date.now(); b.textContent = 'Tap again to reset everything';
+    setTimeout(() => { const e = document.getElementById('reset-btn'); if (e) e.textContent = 'Reset prototype'; }, 3000);
+  }
+};
+function next() {
+  save();
+  R.i++; R.ans = null;
+  if (R.i >= R.q.length) R.done = true;
+  render(); window.scrollTo(0, 0);
+  autoListen();
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-act]');
+  if (b && act[b.dataset.act]) act[b.dataset.act](b);
+});
+render();
+</script>
