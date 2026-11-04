@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* Design tokens from design/prototype.html ("Playful soft"). Components use them through Tailwind,
+   e.g. bg-surface, text-ink-2, text-tone-rising. */
+:root {
+  --bg: #F2F8F5; --desk: #E3EEEA; --surface: #FFFFFF; --surface-2: #E5F3EE; --line: #D4E6DF;
+  --ink: #12332B; --ink-2: #4B6A62; --ink-3: #86A299;
+  --teal: #12937A; --teal-ink: #FFFFFF; --teal-soft: #D2F0E5; --teal-dark: #0B6A57;
+  --amber: #F0A531; --amber-soft: #FDEFD2; --amber-ink: #875000;
+  --coral: #E05C47; --coral-soft: #FCE3DD; --coral-ink: #962D1D;
+  --blue-soft: #DFEBFB; --blue-ink: #2456A6;
+  --ele: #A8BDCB; --ele-2: #8EA6B6; --ele-ink: #21384A; --ear: #F2B5B8; --leaf: #2FB27F; --drop: #7CC7EE;
+  --t-mid: #6F858C; --t-low: #3F6FD1; --t-falling: #D2741F; --t-high: #8A4FD8; --t-rising: #C7437E;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0D1A16; --desk: #08120F; --surface: #14241F; --surface-2: #1A3029; --line: #27413A;
+    --ink: #E3F2EC; --ink-2: #A2BDB4; --ink-3: #6D8980;
+    --teal: #2CC29E; --teal-ink: #05261D; --teal-soft: #16392F; --teal-dark: #68DCBD;
+    --amber: #F2B24E; --amber-soft: #3A2B10; --amber-ink: #F6C978;
+    --coral: #EE7963; --coral-soft: #3C1E18; --coral-ink: #F5A797;
+    --blue-soft: #172B45; --blue-ink: #9DC2F3;
+    --ele: #93A9B8; --ele-2: #7590A2; --ele-ink: #142431; --ear: #D99A9E; --leaf: #38C18D; --drop: #69B6DE;
+    --t-mid: #98ADB3; --t-low: #7FA4F0; --t-falling: #F0A15C; --t-high: #B793F0; --t-rising: #EE80B0;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg); --color-desk: var(--desk); --color-surface: var(--surface); --color-surface-2: var(--surface-2);
+  --color-line: var(--line); --color-ink: var(--ink); --color-ink-2: var(--ink-2); --color-ink-3: var(--ink-3);
+  --color-teal: var(--teal); --color-teal-ink: var(--teal-ink); --color-teal-soft: var(--teal-soft); --color-teal-dark: var(--teal-dark);
+  --color-amber: var(--amber); --color-amber-soft: var(--amber-soft); --color-amber-ink: var(--amber-ink);
+  --color-coral: var(--coral); --color-coral-soft: var(--coral-soft); --color-coral-ink: var(--coral-ink);
+  --color-blue-soft: var(--blue-soft); --color-blue-ink: var(--blue-ink);
+  --color-tone-mid: var(--t-mid); --color-tone-low: var(--t-low); --color-tone-falling: var(--t-falling);
+  --color-tone-high: var(--t-high); --color-tone-rising: var(--t-rising);
+  --font-sans: 'Nunito', 'Noto Sans Thai Looped', system-ui, sans-serif;
+  --font-th: 'Noto Sans Thai Looped', 'Nunito', system-ui, sans-serif;
+}
+
+@layer base {
+  html, body { height: 100%; }
+  body {
+    @apply bg-bg text-ink font-sans antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+  @media (min-width: 520px) { body { @apply bg-desk; } }
+  [lang="th"] { font-family: var(--font-th); }
+  :focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+  button { cursor: pointer; }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-[18px] py-3.5 text-base font-extrabold
+      transition-transform duration-100 active:scale-[0.97];
+  }
+  .btn svg { @apply size-5 shrink-0; }
+  .btn-primary { @apply bg-teal text-teal-ink; }
+  .btn-soft { @apply bg-teal-soft text-teal-dark; }
+  .btn-ghost { @apply bg-surface text-ink shadow-[inset_0_0_0_1.5px_var(--line)]; }
+  .btn-ghost[aria-pressed="true"] { @apply text-teal-dark shadow-[inset_0_0_0_1.5px_var(--teal)]; }
+  .btn-ghost[aria-pressed="true"] svg { fill: currentColor; }
+  .card { @apply flex flex-col gap-3.5 rounded-[28px] border border-line bg-surface p-5; animation: rise .28s ease-out; }
+  .eyebrow { @apply text-[13px] font-extrabold text-ink-2; }
+  .title { @apply text-2xl font-black leading-tight text-balance; }
+  .chip { @apply rounded-full bg-surface-2 px-2.5 py-1 text-xs font-extrabold text-ink-2; }
+}
+
+@keyframes rise { from { transform: translateY(8px); opacity: .5; } to { transform: none; opacity: 1; } }
+@keyframes bob { 50% { transform: translateY(-3px); } }
+@keyframes hop {
+  0%, 100% { transform: translateY(0); }
+  35% { transform: translateY(-9px) rotate(-3deg); }
+  65% { transform: translateY(-4px) rotate(2deg); }
+}
+@keyframes shake { 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } }
+.noi-hi, .noi-happy, .noi-think { animation: bob 3.2s ease-in-out infinite; }
+.noi-cheer { animation: hop .9s ease-in-out infinite; transform-origin: 50% 100%; }
+.noi-oops { animation: shake .5s ease-in-out 1; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
