@@ -80,7 +80,7 @@ async function requestLesson(feedback: string): Promise<unknown> {
   );
   const result = await response.json().catch(() => ({}));
   if (!response.ok || result.error) {
-    const message = `API error ${response.status}: ${JSON.stringify(result.error ?? result, null, 2)}`;
+    const message = `API error ${response.status}: ${result.error?.message ?? JSON.stringify(result)}`;
     throw isTransientStatus(response.status) ? new TransientError(message) : new Error(message);
   }
   const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
