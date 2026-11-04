@@ -4,6 +4,10 @@
 
 ![Status](https://img.shields.io/badge/Status-Active-success) ![Stack](https://img.shields.io/badge/Stack-React%20%7C%20TypeScript%20%7C%20Vite-blue) ![AI](https://img.shields.io/badge/AI-Gemini-orange)
 
+🔗 **[Try it live → nidnoi-app.vercel.app](https://nidnoi-app.vercel.app/)**
+
+<p align="center"><img src="docs/screenshot.jpg" alt="Nidnoi daily lesson screen" width="280" /></p>
+
 ---
 
 ## ✨ Features
@@ -33,6 +37,8 @@
 Requires Node 24+.
 
 ```bash
+git clone https://github.com/earthchawa/nidnoi-app.git
+cd nidnoi-app
 npm install
 npm run dev          # start the dev server
 npm test             # unit tests
