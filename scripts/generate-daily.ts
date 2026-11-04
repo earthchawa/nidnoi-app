@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import { validateLesson, WORDS_PER_LESSON, type Lesson } from '../src/lib/lesson.ts';
 import { lessonPath, readAllLessons, saveLesson } from './data-store.ts';
+import { isTransientStatus, TransientError, withRetry } from './retry.ts';
 
 const API_KEY = process.env.GEMINI_API_KEY;
 const MODEL = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
@@ -77,9 +78,10 @@ async function requestLesson(feedback: string): Promise<unknown> {
       })
     }
   );
-  const result = await response.json();
+  const result = await response.json().catch(() => ({}));
   if (!response.ok || result.error) {
-    throw new Error(`API error: ${JSON.stringify(result.error ?? result, null, 2)}`);
+    const message = `API error ${response.status}: ${JSON.stringify(result.error ?? result, null, 2)}`;
+    throw isTransientStatus(response.status) ? new TransientError(message) : new Error(message);
   }
   const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
   if (!text) throw new Error(`API returned no text: ${JSON.stringify(result).slice(0, 500)}`);
@@ -90,7 +92,10 @@ async function main() {
   console.log(`🤖 กำลังสร้างบทเรียนของ ${today} ด้วย ${MODEL}...`);
   let feedback = '';
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
-    const data = await requestLesson(feedback);
+    const data = await withRetry(() => requestLesson(feedback), {
+      onRetry: (err, n, waitMs) =>
+        console.warn(`⏳ Gemini ยังไม่ว่าง (${err.message.split('\n')[0]}) จะลองใหม่ครั้งที่ ${n} ในอีก ${waitMs / 1000} วินาที`)
+    });
     const errors = validateLesson(data, usedThai);
     if (!errors.length) {
       const lesson = data as Lesson;
