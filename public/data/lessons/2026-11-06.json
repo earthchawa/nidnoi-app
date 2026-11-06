@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-06",
+  "theme": "At the Pharmacy",
+  "context": "At the pharmacy",
+  "words": [
+    {
+      "id": "20261106-1",
+      "thai": "ยา",
+      "phonetic": "yaa",
+      "tones": [
+        "mid"
+      ],
+      "english": "medicine, drug",
+      "category": "Noun",
+      "example": {
+        "thai": "มียาลดกรดไหมครับ",
+        "phonetic": "mii yaa lót gròt mǎi kráp",
+        "english": "Do you have antacid medicine?"
+      },
+      "note": "Most pharmacies in Thailand have licensed pharmacists on-site who can dispense antibiotics and prescription-grade medication over the counter."
+    },
+    {
+      "id": "20261106-2",
+      "thai": "ปวดหัว",
+      "phonetic": "bpùat-hǔa",
+      "tones": [
+        "low",
+        "rising"
+      ],
+      "english": "headache, to have a headache",
+      "category": "Symptom",
+      "example": {
+        "thai": "ผมปวดหัวตั้งแต่เมื่อวาน",
+        "phonetic": "pǒm bpùat-hǔa dtâng-dtàae mʉ̂a-waan",
+        "english": "I've had a headache since yesterday."
+      },
+      "note": "'ปวด' (bpùat) indicates dull or deep aching pain inside an organ or body part, distinct from sharp surface pain ('เจ็บ' jèp)."
+    },
+    {
+      "id": "20261106-3",
+      "thai": "เป็นไข้",
+      "phonetic": "bpen-kâi",
+      "tones": [
+        "mid",
+        "falling"
+      ],
+      "english": "to have a fever",
+      "category": "Symptom",
+      "example": {
+        "thai": "รู้สึกเหมือนจะเป็นไข้",
+        "phonetic": "rúu-sʉ̀k mʉ̌an jà bpen-kâi",
+        "english": "I feel like I'm coming down with a fever."
+      },
+      "note": "To say you have a high fever specifically, add 'สูง' (sǔung) at the end: 'เป็นไข้สูง' (bpen kâi sǔung)."
+    },
+    {
+      "id": "20261106-4",
+      "thai": "แก้แพ้",
+      "phonetic": "gâae-páae",
+      "tones": [
+        "falling",
+        "high"
+      ],
+      "english": "antihistamine, anti-allergy",
+      "category": "Medicine",
+      "example": {
+        "thai": "ขอยาแก้แพ้หน่อยครับ",
+        "phonetic": "kɔ̌ɔ yaa gâae-páae nɔ̀ɔi kráp",
+        "english": "Can I get some allergy medication, please?"
+      },
+      "note": "The word 'แก้' (gâae) means 'to fix/cure'. Thai names many medications by combining 'ยาแก้' with the ailment (e.g., ยาแก้ไอ = cough syrup)."
+    },
+    {
+      "id": "20261106-5",
+      "thai": "เม็ด",
+      "phonetic": "mét",
+      "tones": [
+        "high"
+      ],
+      "english": "tablet, pill (classifier)",
+      "category": "Classifier",
+      "example": {
+        "thai": "กินครั้งละสองเม็ด",
+        "phonetic": "gin kráng lá sɔ̌ɔng mét",
+        "english": "Take two tablets per dose."
+      },
+      "note": "Pharmacists write dosage instructions on the small plastic pouch using this classifier, typically marked beside meal times (ก่อน/หลังอาหาร - before/after meals)."
+    }
+  ]
+}
