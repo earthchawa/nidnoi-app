@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-07",
+  "theme": "Taking a Taxi",
+  "context": "In a Taxi",
+  "words": [
+    {
+      "id": "20261107-1",
+      "thai": "จอด",
+      "phonetic": "jɔ̀ɔt",
+      "tones": [
+        "low"
+      ],
+      "english": "to stop / pull over",
+      "category": "Action",
+      "example": {
+        "thai": "จอด ตรงนี้ ได้ เลย ครับ",
+        "phonetic": "jɔ̀ɔt trong-níi dâai ləəi kráp",
+        "english": "You can pull over right here."
+      },
+      "note": "Use this verb when asking drivers to stop the vehicle."
+    },
+    {
+      "id": "20261107-2",
+      "thai": "ตรงนี้",
+      "phonetic": "trong-níi",
+      "tones": [
+        "mid",
+        "high"
+      ],
+      "english": "right here",
+      "category": "Location",
+      "example": {
+        "thai": "ส่ง ตรงนี้ ครับ",
+        "phonetic": "sòng trong-níi kráp",
+        "english": "Drop me off right here, please."
+      },
+      "note": "'Trong' adds precision to 'níi' (here), meaning exactly at this spot."
+    },
+    {
+      "id": "20261107-3",
+      "thai": "เลี้ยวขวา",
+      "phonetic": "líao-kwǎa",
+      "tones": [
+        "high",
+        "rising"
+      ],
+      "english": "to turn right",
+      "category": "Direction",
+      "example": {
+        "thai": "แยก หน้า เลี้ยวขวา ครับ",
+        "phonetic": "yæ̂æk nâa líao-kwǎa kráp",
+        "english": "Turn right at the next intersection."
+      },
+      "note": "'Yæ̂æk' means intersection; adding 'nâa' means the next one ahead."
+    },
+    {
+      "id": "20261107-4",
+      "thai": "เลี้ยวซ้าย",
+      "phonetic": "líao-sái",
+      "tones": [
+        "high",
+        "high"
+      ],
+      "english": "to turn left",
+      "category": "Direction",
+      "example": {
+        "thai": "เลี้ยวซ้าย เข้า ซอย ครับ",
+        "phonetic": "líao-sái khâo soi kráp",
+        "english": "Turn left into the side street."
+      },
+      "note": "'Soi' refers to side streets or alleys off the main road."
+    },
+    {
+      "id": "20261107-5",
+      "thai": "รถติด",
+      "phonetic": "rót-tìt",
+      "tones": [
+        "high",
+        "low"
+      ],
+      "english": "traffic jam",
+      "category": "Travel",
+      "example": {
+        "thai": "ตอนนี้ รถติด มาก",
+        "phonetic": "tɔɔn-níi rót-tìt mâak",
+        "english": "Traffic is very heavy right now."
+      },
+      "note": "Literally 'car stuck', this is the standard phrase for heavy traffic."
+    }
+  ]
+}
