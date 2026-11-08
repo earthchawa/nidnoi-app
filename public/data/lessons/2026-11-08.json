@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-08",
+  "theme": "At 7-Eleven & Convenience Stores",
+  "context": "At 7-Eleven",
+  "words": [
+    {
+      "id": "20261108-1",
+      "thai": "อุ่น",
+      "phonetic": "ùn",
+      "tones": [
+        "low"
+      ],
+      "english": "to heat up (food)",
+      "category": "Verb",
+      "example": {
+        "thai": "ช่วยอุ่นให้หน่อยครับ",
+        "phonetic": "chûai ùn hâi nɔ̀i khráp",
+        "english": "Could you please heat this up for me?"
+      },
+      "note": "Cashiers will often ask 'อุ่นไหม' (ùn mǎi - 'Heat it up?') when you buy ready-to-eat meals, buns, or toasties."
+    },
+    {
+      "id": "20261108-2",
+      "thai": "ถุง",
+      "phonetic": "thǔng",
+      "tones": [
+        "rising"
+      ],
+      "english": "bag (plastic bag)",
+      "category": "Noun",
+      "example": {
+        "thai": "ไม่รับถุงครับ",
+        "phonetic": "mâi ráp thǔng khráp",
+        "english": "I don't need a bag, thanks."
+      },
+      "note": "Thai convenience stores do not automatically provide free plastic bags; say 'mâi ráp thǔng' if you have your own."
+    },
+    {
+      "id": "20261108-3",
+      "thai": "หลอด",
+      "phonetic": "lɔ̀ɔt",
+      "tones": [
+        "low"
+      ],
+      "english": "straw",
+      "category": "Noun",
+      "example": {
+        "thai": "ขอหลอดด้วยครับ",
+        "phonetic": "khɔ̌ɔ lɔ̀ɔt dûai khráp",
+        "english": "May I have a straw as well?"
+      },
+      "note": "Straws are usually stored behind the register or dispenser station rather than packed by default."
+    },
+    {
+      "id": "20261108-4",
+      "thai": "สแกน",
+      "phonetic": "sà-kɛɛn",
+      "tones": [
+        "low",
+        "mid"
+      ],
+      "english": "to scan (QR payment)",
+      "category": "Verb",
+      "example": {
+        "thai": "สแกนจ่ายได้ไหมครับ",
+        "phonetic": "sà-kɛɛn jàai dâi mǎi khráp",
+        "english": "Can I pay by scanning QR code?"
+      },
+      "note": "Almost all Thai convenience stores and chain shops accept PromptPay or wallet QR codes via 'สแกนจ่าย' (sà-kɛɛn jàai)."
+    },
+    {
+      "id": "20261108-5",
+      "thai": "ใบเสร็จ",
+      "phonetic": "bai-sèt",
+      "tones": [
+        "mid",
+        "low"
+      ],
+      "english": "receipt",
+      "category": "Noun",
+      "example": {
+        "thai": "รับใบเสร็จไหมครับ",
+        "phonetic": "ráp bai-sèt mǎi khráp",
+        "english": "Would you like your receipt?"
+      },
+      "note": "Keep your 7-Eleven receipt if you collect promotional stamp coupons printed at the bottom during promotional campaigns."
+    }
+  ]
+}
