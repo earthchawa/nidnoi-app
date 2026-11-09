@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-09",
+  "theme": "Renting a Motorbike",
+  "context": "At a bike rental shop",
+  "words": [
+    {
+      "id": "20261109-1",
+      "thai": "เช่า",
+      "phonetic": "châo",
+      "tones": [
+        "falling"
+      ],
+      "english": "to rent",
+      "category": "Verb",
+      "example": {
+        "thai": "ต้องการเช่าสองวันครับ",
+        "phonetic": "dtɔ̂ng-gaan châo sɔ̌ɔng wan khráp",
+        "english": "I would like to rent for two days."
+      },
+      "note": "Use 'châo' for renting vehicles, condos, or equipment."
+    },
+    {
+      "id": "20261109-2",
+      "thai": "มอเตอร์ไซค์",
+      "phonetic": "mɔɔ-dtəə-sai",
+      "tones": [
+        "mid",
+        "mid",
+        "mid"
+      ],
+      "english": "motorbike / scooter",
+      "category": "Noun",
+      "example": {
+        "thai": "มีมอเตอร์ไซค์เกียร์ออโต้ไหมครับ",
+        "phonetic": "mii mɔɔ-dtəə-sai giia ɔɔ-dtôo mǎi khráp",
+        "english": "Do you have an automatic scooter available?"
+      },
+      "note": "In casual conversation, locals often shorten this to 'mɔɔ-sai'."
+    },
+    {
+      "id": "20261109-3",
+      "thai": "หมวกกันน็อค",
+      "phonetic": "mùak-gan-nók",
+      "tones": [
+        "low",
+        "mid",
+        "high"
+      ],
+      "english": "helmet",
+      "category": "Noun",
+      "example": {
+        "thai": "ขอยืมหมวกกันน็อคสองใบครับ",
+        "phonetic": "khɔ̌ɔ yuum mùak-gan-nók sɔ̌ɔng bai khráp",
+        "english": "May I have two helmets, please?"
+      },
+      "note": "The classifier for helmets is 'bai' (ใบ). Always ask for one with a clean visor."
+    },
+    {
+      "id": "20261109-4",
+      "thai": "มัดจำ",
+      "phonetic": "mát-jam",
+      "tones": [
+        "high",
+        "mid"
+      ],
+      "english": "deposit / security deposit",
+      "category": "Noun",
+      "example": {
+        "thai": "ต้องวางเงินมัดจำไหมครับ",
+        "phonetic": "dtɔ̂ng waang ngən mát-jam mǎi khráp",
+        "english": "Do I need to leave a cash deposit?"
+      },
+      "note": "Offer a cash deposit and passport photocopy instead of surrendering your original passport."
+    },
+    {
+      "id": "20261109-5",
+      "thai": "น้ำมัน",
+      "phonetic": "nám-man",
+      "tones": [
+        "high",
+        "mid"
+      ],
+      "english": "fuel / gasoline",
+      "category": "Noun",
+      "example": {
+        "thai": "ต้องเติมน้ำมันเต็มถังก่อนคืนไหม",
+        "phonetic": "dtɔ̂ng dtəəm nám-man dtem thǎng gɔ̀ɔn khuun mǎi",
+        "english": "Do I need to return it with a full tank of gas?"
+      },
+      "note": "Most rental shops operate on a 'return with the same fuel level' policy."
+    }
+  ]
+}
