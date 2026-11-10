@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-10",
+  "theme": "Ordering Street Noodles",
+  "context": "At a noodle stall",
+  "words": [
+    {
+      "id": "20261110-1",
+      "thai": "เผ็ดน้อย",
+      "phonetic": "phet nọi",
+      "tones": [
+        "low",
+        "high"
+      ],
+      "english": "less spicy / mild",
+      "category": "Preference",
+      "example": {
+        "thai": "ขอเผ็ดน้อยนะครับ",
+        "phonetic": "khọ phet nọi na khrap",
+        "english": "Less spicy, please."
+      },
+      "note": "Essential phrase if you want just a hint of chili without overpowering heat."
+    },
+    {
+      "id": "20261110-2",
+      "thai": "เส้นใหญ่",
+      "phonetic": "sen yai",
+      "tones": [
+        "falling",
+        "low"
+      ],
+      "english": "wide rice noodles",
+      "category": "Food",
+      "example": {
+        "thai": "เอาเส้นใหญ่น้ำครับ",
+        "phonetic": "ao sen yai nam khrap",
+        "english": "I will take wide rice noodles with soup, please."
+      },
+      "note": "One of the most popular noodle types in Thailand, chewy and broad."
+    },
+    {
+      "id": "20261110-3",
+      "thai": "กลับบ้าน",
+      "phonetic": "klap ban",
+      "tones": [
+        "low",
+        "falling"
+      ],
+      "english": "takeaway / to-go",
+      "category": "Ordering",
+      "example": {
+        "thai": "สั่งกลับบ้านครับ",
+        "phonetic": "sang klap ban khrap",
+        "english": "Ordering for takeaway, please."
+      },
+      "note": "Literally means 'return home', used everywhere when you want food packed to go."
+    },
+    {
+      "id": "20261110-4",
+      "thai": "แห้ง",
+      "phonetic": "haeng",
+      "tones": [
+        "falling"
+      ],
+      "english": "dry (without soup)",
+      "category": "Food",
+      "example": {
+        "thai": "ขอเส้นเล็กแห้งหนึ่งชามครับ",
+        "phonetic": "khọ sen lek haeng neung cham khrap",
+        "english": "One bowl of dry thin rice noodles, please."
+      },
+      "note": "Noodle dishes in Thailand are ordered either 'nam' (with soup) or 'haeng' (dry)."
+    },
+    {
+      "id": "20261110-5",
+      "thai": "ไม่ใส่",
+      "phonetic": "mai sai",
+      "tones": [
+        "falling",
+        "low"
+      ],
+      "english": "without / do not put",
+      "category": "Request",
+      "example": {
+        "thai": "ไม่ใส่กระเทียมเจียวครับ",
+        "phonetic": "mai sai kra-thiam jiao khrap",
+        "english": "No crispy garlic, please."
+      },
+      "note": "Follow this phrase with any ingredient you want to omit from your dish."
+    }
+  ]
+}
