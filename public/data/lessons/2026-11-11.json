@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-11",
+  "theme": "Ordering at a Specialty Café",
+  "context": "At a café",
+  "words": [
+    {
+      "id": "20261111-1",
+      "thai": "หวานน้อย",
+      "phonetic": "wǎan-nɔ́ɔi",
+      "tones": [
+        "rising",
+        "high"
+      ],
+      "english": "less sweet",
+      "category": "Preference",
+      "example": {
+        "thai": "ขอลาเต้เย็นหวานน้อยครับ",
+        "phonetic": "khɔ̌ɔ laa-dtêe yen wǎan-nɔ́ɔi khráp",
+        "english": "Can I have an iced latte with less sweetness, please?"
+      },
+      "note": "Standard Thai café drinks are often very sweet; requesting 'หวานน้อย' typically reduces syrup or condensed milk by about half."
+    },
+    {
+      "id": "20261111-2",
+      "thai": "คั่วกลาง",
+      "phonetic": "khûa-glaang",
+      "tones": [
+        "falling",
+        "mid"
+      ],
+      "english": "medium roast",
+      "category": "Coffee style",
+      "example": {
+        "thai": "ขอกาแฟคั่วกลางครับ",
+        "phonetic": "khɔ̌ɔ gaa-fɛɛ khûa-glaang khráp",
+        "english": "I would like medium roast coffee, please."
+      },
+      "note": "Independent cafés in Thailand frequently offer choices between คั่วอ่อน (light roast), คั่วกลาง (medium roast), and คั่วเข้ม (dark roast)."
+    },
+    {
+      "id": "20261111-3",
+      "thai": "นมโอ๊ต",
+      "phonetic": "nom-óot",
+      "tones": [
+        "mid",
+        "high"
+      ],
+      "english": "oat milk",
+      "category": "Ingredient",
+      "example": {
+        "thai": "เปลี่ยนเป็นนมโอ๊ตได้ไหมครับ",
+        "phonetic": "bplìan bpen nom-óot dâi mǎi khráp",
+        "english": "Can I switch to oat milk?"
+      },
+      "note": "Plant-based alternatives are widely available in modern Thai cafés, typically with an add-on surcharge of 20 to 30 THB."
+    },
+    {
+      "id": "20261111-4",
+      "thai": "ปั่น",
+      "phonetic": "bàn",
+      "tones": [
+        "low"
+      ],
+      "english": "blended / frappé",
+      "category": "Drink style",
+      "example": {
+        "thai": "ขอชาเขียวปั่นหนึ่งแก้วครับ",
+        "phonetic": "khɔ̌ɔ chaa-khǐao bàn nʉ̀ng gɛ̂ɛo khráp",
+        "english": "Can I get one blended green tea, please?"
+      },
+      "note": "Thai menus generally classify drinks into three preparation styles: ร้อน (hot), เย็น (iced), and ปั่น (blended/frappé)."
+    },
+    {
+      "id": "20261111-5",
+      "thai": "แก้วใหญ่",
+      "phonetic": "gɛ̂ɛo-yài",
+      "tones": [
+        "falling",
+        "low"
+      ],
+      "english": "large cup / size",
+      "category": "Drink size",
+      "example": {
+        "thai": "เอาอเมริกาโน่เย็นแก้วใหญ่ครับ",
+        "phonetic": "ao a-mee-rí-gaa-nôo yen gɛ̂ɛo-yài khráp",
+        "english": "I will take a large iced Americano."
+      },
+      "note": "Unless visiting international chains using Italian naming, local shops differentiate cup sizes simply as แก้วเล็ก (small) and แก้วใหญ่ (large)."
+    }
+  ]
+}
