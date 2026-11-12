@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-12",
+  "theme": "At the Barbershop",
+  "context": "At the barbershop",
+  "words": [
+    {
+      "id": "20261112-1",
+      "thai": "ตัดผม",
+      "phonetic": "dtat-pohm",
+      "tones": [
+        "low",
+        "rising"
+      ],
+      "english": "to get a haircut",
+      "category": "Verb",
+      "example": {
+        "thai": "อยากตัดผมครับ",
+        "phonetic": "yàak dtat-pohm khrap",
+        "english": "I'd like to get a haircut."
+      },
+      "note": "Thai hair salons often include a hair wash and scalp massage automatically as part of the haircut service."
+    },
+    {
+      "id": "20261112-2",
+      "thai": "ทรง",
+      "phonetic": "sohng",
+      "tones": [
+        "mid"
+      ],
+      "english": "hairstyle",
+      "category": "Noun",
+      "example": {
+        "thai": "เอาทรงนี้ครับ",
+        "phonetic": "ao sohng nii khrap",
+        "english": "I want this hairstyle."
+      },
+      "note": "Showing a picture on your phone while saying 'ao sohng nii' is the most reliable way to explain your desired cut."
+    },
+    {
+      "id": "20261112-3",
+      "thai": "เล็ม",
+      "phonetic": "lem",
+      "tones": [
+        "mid"
+      ],
+      "english": "to trim",
+      "category": "Verb",
+      "example": {
+        "thai": "ช่วยเล็มข้างๆ หน่อยครับ",
+        "phonetic": "chûai lem khâang-khâang nòi khrap",
+        "english": "Please trim the sides a bit."
+      },
+      "note": "Use 'lem' when you only want a light touch-up or clean-up around the edges without losing length."
+    },
+    {
+      "id": "20261112-4",
+      "thai": "สั้น",
+      "phonetic": "sân",
+      "tones": [
+        "falling"
+      ],
+      "english": "short",
+      "category": "Adjective",
+      "example": {
+        "thai": "ไม่เอาสั้นมากนะครับ",
+        "phonetic": "mâi ao sân mâak na khrap",
+        "english": "Please don't make it too short."
+      },
+      "note": "Use 'sân' for length (hair, pants, skirts). For height, use 'têa' (short/short-statured)."
+    },
+    {
+      "id": "20261112-5",
+      "thai": "นิดหน่อย",
+      "phonetic": "nit-nòi",
+      "tones": [
+        "high",
+        "low"
+      ],
+      "english": "a little bit",
+      "category": "Adverb",
+      "example": {
+        "thai": "ตัดออกนิดหน่อยครับ",
+        "phonetic": "dtat ôok nit-nòi khrap",
+        "english": "Just cut off a little bit."
+      },
+      "note": "Attaching 'nit-nòi' to your instruction helps prevent the barber from taking off too much length."
+    }
+  ]
+}
