@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-13",
+  "theme": "Air Conditioner Servicing",
+  "context": "Calling an AC technician",
+  "words": [
+    {
+      "id": "20261113-1",
+      "thai": "แอร์",
+      "phonetic": "ae",
+      "tones": [
+        "mid"
+      ],
+      "english": "air conditioner",
+      "category": "noun",
+      "example": {
+        "thai": "แอร์ห้องนอนเปิดไม่ติด",
+        "phonetic": "ae hông nɔɔn bpə̀ət mâi dtìt",
+        "english": "The bedroom AC won't turn on."
+      },
+      "note": "'แอร์' is the universal spoken word; the formal term 'เครื่องปรับอากาศ' is rarely heard in daily life."
+    },
+    {
+      "id": "20261113-2",
+      "thai": "ล้าง",
+      "phonetic": "láang",
+      "tones": [
+        "high"
+      ],
+      "english": "to clean / to service (AC)",
+      "category": "verb",
+      "example": {
+        "thai": "อยากจ้างช่างมาล้างแอร์",
+        "phonetic": "yàak jâang châng maa láang ae",
+        "english": "I want to hire a technician to clean the AC."
+      },
+      "note": "In Thailand's humid climate, expats usually get their AC units deep cleaned every 4 to 6 months."
+    },
+    {
+      "id": "20261113-3",
+      "thai": "ไม่เย็น",
+      "phonetic": "mâi-yen",
+      "tones": [
+        "falling",
+        "mid"
+      ],
+      "english": "not cold (blowing warm air)",
+      "category": "adjective",
+      "example": {
+        "thai": "แอร์มีแต่ลม ไม่เย็นเลย",
+        "phonetic": "ae mii dtɛ̀ɛ lom mâi yen ləəi",
+        "english": "The AC is only blowing air, not cold at all."
+      },
+      "note": "This is the most common complaint expats report to landlords or technicians when refrigerant is low or coils are dusty."
+    },
+    {
+      "id": "20261113-4",
+      "thai": "น้ำหยด",
+      "phonetic": "náam-yòt",
+      "tones": [
+        "high",
+        "low"
+      ],
+      "english": "water leaking / dripping",
+      "category": "verb phrase",
+      "example": {
+        "thai": "แอร์มีน้ำหยดลงมาบนเตียง",
+        "phonetic": "ae mii náam yòt long maa bon dtiang",
+        "english": "Water is dripping from the AC onto the bed."
+      },
+      "note": "AC water dripping usually means the drainage pipe (ท่อน้ำทิ้ง) is clogged with jelly-like dust buildup."
+    },
+    {
+      "id": "20261113-5",
+      "thai": "ช่าง",
+      "phonetic": "châng",
+      "tones": [
+        "falling"
+      ],
+      "english": "technician / repair person",
+      "category": "noun",
+      "example": {
+        "thai": "ช่างจะเข้ามาดูกี่โมง",
+        "phonetic": "châng jà khâo maa duu gìi moong",
+        "english": "What time will the technician come check it?"
+      },
+      "note": "You can use 'ช่าง' directly as a polite title when speaking to plumbers, electricians, or mechanics."
+    }
+  ]
+}
