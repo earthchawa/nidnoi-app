@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-14",
+  "theme": "At the Laundromat",
+  "context": "At the laundromat",
+  "words": [
+    {
+      "id": "20261114-1",
+      "thai": "ซัก",
+      "phonetic": "sák",
+      "tones": [
+        "high"
+      ],
+      "english": "to wash (clothes)",
+      "category": "verb",
+      "example": {
+        "thai": "ผ้ากองนี้ซักน้ำเย็นได้ไหม",
+        "phonetic": "phâa gɔɔng níi sák náam yen dâi mǎi",
+        "english": "Can this pile of clothes be washed in cold water?"
+      },
+      "note": "Use 'ซัก' exclusively for fabrics and clothes; other cleaning actions use 'ล้าง' (dishes/hands/cars) or 'ถู' (floors)."
+    },
+    {
+      "id": "20261114-2",
+      "thai": "อบ",
+      "phonetic": "òp",
+      "tones": [
+        "low"
+      ],
+      "english": "to tumble dry",
+      "category": "verb",
+      "example": {
+        "thai": "ต้องอบกี่นาที",
+        "phonetic": "dtɔ̂ɔng òp gìi naa-thii",
+        "english": "How many minutes does it need to dry?"
+      },
+      "note": "A dryer machine is called 'เครื่องอบผ้า'. Most Thai laundromats add drying time in 6-to-8-minute increments per 10 baht."
+    },
+    {
+      "id": "20261114-3",
+      "thai": "เหรียญ",
+      "phonetic": "rǐan",
+      "tones": [
+        "rising"
+      ],
+      "english": "coin",
+      "category": "noun",
+      "example": {
+        "thai": "ตู้ใช้เหรียญสิบบาท",
+        "phonetic": "dtûu chái rǐan sìp bàat",
+        "english": "The machine takes ten-baht coins."
+      },
+      "note": "Most coin-op washers in Thailand only take shiny 10-baht coins, so keep an eye out for coin-changer machines nearby."
+    },
+    {
+      "id": "20261114-4",
+      "thai": "แลก",
+      "phonetic": "lɛ̂ɛk",
+      "tones": [
+        "falling"
+      ],
+      "english": "to exchange / change (money)",
+      "category": "verb",
+      "example": {
+        "thai": "ขอแลกเหรียญหน่อยครับ",
+        "phonetic": "khɔ̌ɔ lɛ̂ɛk rǐan nɔ̀ɔi khráp",
+        "english": "Could I please change some cash into coins?"
+      },
+      "note": "Look for the wall-mounted box labeled 'ตู้แลกเหรียญ' (coin changer) which accepts 20, 50, and 100 baht banknotes."
+    },
+    {
+      "id": "20261114-5",
+      "thai": "ผงซักฟอก",
+      "phonetic": "phǒng-sák-fɔ̂ɔk",
+      "tones": [
+        "rising",
+        "high",
+        "falling"
+      ],
+      "english": "laundry detergent",
+      "category": "noun",
+      "example": {
+        "thai": "เทผงซักฟอกตรงช่องไหน",
+        "phonetic": "thee phǒng-sák-fɔ̂ɔk dtrong chɔ̂ɔng nǎi",
+        "english": "Which slot do I pour the detergent into?"
+      },
+      "note": "Technically 'ผง' means powder, but Thais use 'ผงซักฟอก' broadly for all laundry detergent, including liquid types."
+    }
+  ]
+}
