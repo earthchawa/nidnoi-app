@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-15",
+  "theme": "Clothing Alterations",
+  "context": "At the tailor shop",
+  "words": [
+    {
+      "id": "20261115-1",
+      "thai": "แก้",
+      "phonetic": "gâae",
+      "tones": [
+        "falling"
+      ],
+      "english": "to alter / modify (clothing)",
+      "category": "Verb",
+      "example": {
+        "thai": "ช่วยแก้กางเกงตัวนี้ให้หน่อยครับ",
+        "phonetic": "chûai gâae gaang-geeng dtua níi hâi nòi kráp",
+        "english": "Could you please alter these pants for me?"
+      },
+      "note": "Thai neighborhood alteration shops (ร้านแก้ทรง) can customize fits quickly and affordably."
+    },
+    {
+      "id": "20261115-2",
+      "thai": "เอว",
+      "phonetic": "eow",
+      "tones": [
+        "mid"
+      ],
+      "english": "waist",
+      "category": "Noun",
+      "example": {
+        "thai": "เอวหลวมไปครับ",
+        "phonetic": "eow lǔam bpai kráp",
+        "english": "The waist is too loose."
+      },
+      "note": "Point to your waistline while saying 'เอว' to help the tailor pinpoint the exact fit needed."
+    },
+    {
+      "id": "20261115-3",
+      "thai": "เอาเข้า",
+      "phonetic": "ao-khâo",
+      "tones": [
+        "mid",
+        "falling"
+      ],
+      "english": "to take in (tighten a garment)",
+      "category": "Verb phrase",
+      "example": {
+        "thai": "อยากให้เอาเข้าสองนิ้วครับ",
+        "phonetic": "yàak hâi ao-khâo sǒong níu kráp",
+        "english": "I would like to take it in two inches."
+      },
+      "note": "Thailand uses inches (นิ้ว - níu) for clothing measurements, so specify adjustments in inches."
+    },
+    {
+      "id": "20261115-4",
+      "thai": "ซิป",
+      "phonetic": "síp",
+      "tones": [
+        "high"
+      ],
+      "english": "zipper",
+      "category": "Noun",
+      "example": {
+        "thai": "ซิปเสีย เปลี่ยนใหม่ได้ไหมครับ",
+        "phonetic": "síp sǐa, bplìan mài dâai mái kráp",
+        "english": "The zipper is broken, can you replace it with a new one?"
+      },
+      "note": "Local repair stalls can easily replace broken zippers on jeans, jackets, or bags."
+    },
+    {
+      "id": "20261115-5",
+      "thai": "ยาวไป",
+      "phonetic": "yaao-bpai",
+      "tones": [
+        "mid",
+        "mid"
+      ],
+      "english": "too long",
+      "category": "Adjective phrase",
+      "example": {
+        "thai": "ขากางเกงยาวไปครับ",
+        "phonetic": "khǎa gaang-geeng yaao-bpai kráp",
+        "english": "The pant legs are too long."
+      },
+      "note": "Adding 'ไป' (bpai) after any adjective signals that something is 'excessive' or 'too much'."
+    }
+  ]
+}
