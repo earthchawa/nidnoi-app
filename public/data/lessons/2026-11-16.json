@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-16",
+  "theme": "At the Vet Clinic",
+  "context": "At the vet clinic",
+  "words": [
+    {
+      "id": "20261116-1",
+      "thai": "ฉีดวัคซีน",
+      "phonetic": "chìit-wák-siin",
+      "tones": [
+        "low",
+        "high",
+        "mid"
+      ],
+      "english": "to vaccinate / get vaccinated",
+      "category": "Medical procedure",
+      "example": {
+        "thai": "วันนี้พาน้องมาฉีดวัคซีนประจำปีครับ",
+        "phonetic": "wan-níi phaa náawng maa chìit wák-siin bprà-jam-bpii khráp",
+        "english": "Today I brought my pet for annual vaccinations."
+      },
+      "note": "Thai pet owners and clinic staff almost always refer to pets affectionately as น้อง (náawng, 'younger sibling')."
+    },
+    {
+      "id": "20261116-2",
+      "thai": "ถ่ายพยาธิ",
+      "phonetic": "thàai-phá-yâat",
+      "tones": [
+        "low",
+        "high",
+        "falling"
+      ],
+      "english": "to deworm",
+      "category": "Medical procedure",
+      "example": {
+        "thai": "ถึงเวลาถ่ายพยาธิตามรอบแล้วค่ะ",
+        "phonetic": "thěung wee-laa thàai phá-yâat dtaam râawp láaeo khà",
+        "english": "It is time for the routine deworming."
+      },
+      "note": "Due to Thailand's tropical climate, vets recommend deworming outdoor pets every 1 to 3 months."
+    },
+    {
+      "id": "20261116-3",
+      "thai": "ซึม",
+      "phonetic": "seum",
+      "tones": [
+        "mid"
+      ],
+      "english": "lethargic / listless",
+      "category": "Symptom",
+      "example": {
+        "thai": "แมวมีอาการซึม ไม่ยอมกินข้าว",
+        "phonetic": "maaeo mii aa-gaan seum, mâi yaawm gin khâao",
+        "english": "The cat is lethargic and refuses to eat."
+      },
+      "note": "ซึม is the key symptom word vets will ask about to gauge if an animal is feeling unwell."
+    },
+    {
+      "id": "20261116-4",
+      "thai": "อ้วก",
+      "phonetic": "ûak",
+      "tones": [
+        "falling"
+      ],
+      "english": "to vomit / throw up",
+      "category": "Symptom",
+      "example": {
+        "thai": "สุนัขอ้วกมาสองครั้งตั้งแต่เช้า",
+        "phonetic": "sù-nák ûak maa sǎawng khráng dtâng-dtàae cháo",
+        "english": "The dog has vomited twice since this morning."
+      },
+      "note": "While อาเจียน is the formal medical word, อ้วก is universally used by owners and vets during consultations."
+    },
+    {
+      "id": "20261116-5",
+      "thai": "ตรวจเลือด",
+      "phonetic": "trùat-lêuat",
+      "tones": [
+        "low",
+        "falling"
+      ],
+      "english": "blood test",
+      "category": "Medical procedure",
+      "example": {
+        "thai": "หมอขอตรวจเลือดดูค่าไตก่อนนะครับ",
+        "phonetic": "mǎaw khǎaw trùat lêuat duu khâa dtai gàawn ná khráp",
+        "english": "The vet would like to run a blood test to check kidney values first."
+      },
+      "note": "Vets frequently recommend a pre-anesthetic or wellness blood test before dental cleanings or surgery."
+    }
+  ]
+}
