@@ -1,0 +1,87 @@
+{
+  "date": "2026-11-17",
+  "theme": "At a Traditional Thai Massage Shop",
+  "context": "At a massage shop",
+  "words": [
+    {
+      "id": "20261117-1",
+      "thai": "เมื่อย",
+      "phonetic": "mûay",
+      "tones": [
+        "falling"
+      ],
+      "english": "muscle-sore / stiff",
+      "category": "Symptom",
+      "example": {
+        "thai": "เมื่อยคอกับไหล่มากครับ",
+        "phonetic": "mûay kho̜o gàp lài mâak khráp",
+        "english": "My neck and shoulders are very stiff and sore."
+      },
+      "note": "Use 'mûay' for muscular aches or stiffness from sitting or exercise, distinct from sharp pain ('jèp') or general illness."
+    },
+    {
+      "id": "20261117-2",
+      "thai": "นวด",
+      "phonetic": "nûat",
+      "tones": [
+        "falling"
+      ],
+      "english": "to massage",
+      "category": "Verb",
+      "example": {
+        "thai": "ขอนวดไทยสองชั่วโมงครับ",
+        "phonetic": "khǒ̜o nûat thai sǒ̜ong chûa-moong khráp",
+        "english": "I would like a two-hour Thai massage, please."
+      },
+      "note": "Combine with service types to specify what you want, e.g., 'nûat thai' (Thai massage) or 'nûat tháo' (foot massage)."
+    },
+    {
+      "id": "20261117-3",
+      "thai": "หนัก",
+      "phonetic": "nàk",
+      "tones": [
+        "low"
+      ],
+      "english": "firm / hard pressure",
+      "category": "Adjective",
+      "example": {
+        "thai": "ช่วยนวดหนักอีกนิดได้ไหมครับ",
+        "phonetic": "chûay nûat nàk èek nít dâai mǎi khráp",
+        "english": "Could you please massage a bit firmer?"
+      },
+      "note": "While 'nàk' literally means heavy, in a massage context it asks for deeper, stronger pressure."
+    },
+    {
+      "id": "20261117-4",
+      "thai": "เบา",
+      "phonetic": "bao",
+      "tones": [
+        "mid"
+      ],
+      "english": "gentle / soft pressure",
+      "category": "Adjective",
+      "example": {
+        "thai": "ขอเบามือหน่อยครับ",
+        "phonetic": "khǒ̜o bao meu nò̜i khráp",
+        "english": "Please go a bit gentler with your hands."
+      },
+      "note": "Saying 'bao bao' or 'bao meu' immediately lets the masseuse know the current pressure is too intense."
+    },
+    {
+      "id": "20261117-5",
+      "thai": "เจ็บ",
+      "phonetic": "jèp",
+      "tones": [
+        "low"
+      ],
+      "english": "to hurt / painful",
+      "category": "Sensation",
+      "example": {
+        "thai": "เจ็บเกินไปครับ",
+        "phonetic": "jèp geo̜n-bpai khráp",
+        "english": "That hurts too much."
+      },
+      "note": "Don't suffer in silence—saying 'jèp' firmly alerts the therapist to ease off a sensitive tendon or bone."
+    }
+  ]
+}
