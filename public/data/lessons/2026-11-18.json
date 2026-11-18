@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-18",
+  "theme": "Buying Fruit at a Local Stall",
+  "context": "At a fruit stall",
+  "words": [
+    {
+      "id": "20261118-1",
+      "thai": "ปอก",
+      "phonetic": "bpɔ̀ɔk",
+      "tones": [
+        "low"
+      ],
+      "english": "to peel",
+      "category": "verb",
+      "example": {
+        "thai": "ช่วยปอกเปลือกให้ด้วยครับ",
+        "phonetic": "chûuay bpɔ̀ɔk bplʉ̀ʉak hâi dûuay khráp",
+        "english": "Please peel the skin off for me."
+      },
+      "note": "Fruit cart vendors will gladly peel and chop fruits like pineapple or papaya into bite-sized pieces for free."
+    },
+    {
+      "id": "20261118-2",
+      "thai": "โล",
+      "phonetic": "loo",
+      "tones": [
+        "mid"
+      ],
+      "english": "kilo (kilogram)",
+      "category": "noun",
+      "example": {
+        "thai": "มะม่วงโลละกี่บาทครับ",
+        "phonetic": "má-mûuang loo lá gìi bàat khráp",
+        "english": "How many baht per kilo are the mangoes?"
+      },
+      "note": "'โล' (loo) is the ubiquitous everyday spoken short form for 'กิโลกรัม' (kilogram) across all Thai markets."
+    },
+    {
+      "id": "20261118-3",
+      "thai": "ชิม",
+      "phonetic": "chim",
+      "tones": [
+        "mid"
+      ],
+      "english": "to taste, to sample",
+      "category": "verb",
+      "example": {
+        "thai": "ขอลองชิมก่อนได้ไหมครับ",
+        "phonetic": "khɔ̌ɔ lɔɔng chim gɔ̀ɔn dâi mǎi khráp",
+        "english": "May I taste a sample first?"
+      },
+      "note": "Vendors selling seasonal fruits like longan, pomelo, or grapes will usually be happy to let you try a piece."
+    },
+    {
+      "id": "20261118-4",
+      "thai": "สุก",
+      "phonetic": "sùk",
+      "tones": [
+        "low"
+      ],
+      "english": "ripe",
+      "category": "adjective",
+      "example": {
+        "thai": "มีลูกที่สุกพร้อมกินไหมครับ",
+        "phonetic": "mii lûuk thîi sùk phrɔ́ɔm gin mǎi khráp",
+        "english": "Do you have one that's ripe and ready to eat?"
+      },
+      "note": "Say 'สุกพร้อมกิน' (sùk phrɔ́ɔm gin) if you want fruit you can enjoy immediately rather than waiting for it to ripen."
+    },
+    {
+      "id": "20261118-5",
+      "thai": "พริกเกลือ",
+      "phonetic": "phrík-glʉʉa",
+      "tones": [
+        "high",
+        "mid"
+      ],
+      "english": "chili-salt dip",
+      "category": "noun",
+      "example": {
+        "thai": "ขอพริกเกลือเพิ่มอีกหนึ่งซองครับ",
+        "phonetic": "khɔ̌ɔ phrík-glʉʉa phə̂əm ìik nʉ̀ng sɔɔng khráp",
+        "english": "Can I have one more packet of chili salt, please?"
+      },
+      "note": "This classic sweet, salty, and spicy seasoning mix is typically offered when purchasing tart fruits like guava or green mango."
+    }
+  ]
+}
