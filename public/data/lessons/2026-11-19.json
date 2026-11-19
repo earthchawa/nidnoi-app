@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-19",
+  "theme": "At the Dental Clinic",
+  "context": "At the dentist",
+  "words": [
+    {
+      "id": "20261119-1",
+      "thai": "อุดฟัน",
+      "phonetic": "ùt-fan",
+      "tones": [
+        "low",
+        "mid"
+      ],
+      "english": "to get a filling / fill a tooth",
+      "category": "verb",
+      "example": {
+        "thai": "หมอนัดมาอุดฟันซี่นี้ครับ",
+        "phonetic": "mɔ̌ɔ nát maa ùt-fan sîi níi khráp",
+        "english": "The dentist made an appointment to fill this tooth."
+      },
+      "note": "Use ซี่ (sîi) as the classifier for individual teeth instead of อัน (an)."
+    },
+    {
+      "id": "20261119-2",
+      "thai": "ขูดหินปูน",
+      "phonetic": "khùut-hǐn-puun",
+      "tones": [
+        "low",
+        "rising",
+        "mid"
+      ],
+      "english": "teeth scaling / tartar cleaning",
+      "category": "verb",
+      "example": {
+        "thai": "อยากตรวจฟันแล้วก็ขูดหินปูนด้วยครับ",
+        "phonetic": "yàak trùat fan lέɛo-kɔ̂ɔ khùut-hǐn-puun dûay khráp",
+        "english": "I'd like a dental checkup and also teeth scaling, please."
+      },
+      "note": "Literally translates to 'scrape limestone' (หินปูน = dental plaque / tartar)."
+    },
+    {
+      "id": "20261119-3",
+      "thai": "เสียวฟัน",
+      "phonetic": "sǐao-fan",
+      "tones": [
+        "rising",
+        "mid"
+      ],
+      "english": "tooth sensitivity",
+      "category": "feeling",
+      "example": {
+        "thai": "ดื่มน้ำเย็นแล้วรู้สึกเสียวฟันมาก",
+        "phonetic": "dʉ̀ʉm náam yen lέɛo rúu-sʉ̀k sǐao-fan mâak",
+        "english": "When I drink cold water, my teeth feel very sensitive."
+      },
+      "note": "เสียว (sǐao) describes an acute shooting tingling sensation, distinctly different from an ache."
+    },
+    {
+      "id": "20261119-4",
+      "thai": "บ้วนปาก",
+      "phonetic": "bûan-pàak",
+      "tones": [
+        "falling",
+        "low"
+      ],
+      "english": "to rinse one's mouth",
+      "category": "verb",
+      "example": {
+        "thai": "หมอบอกให้บ้วนปากได้เลยครับ",
+        "phonetic": "mɔ̌ɔ bɔ̀ɔk hâi bûan-pàak dâi looei khráp",
+        "english": "The dentist told me I can rinse my mouth now."
+      },
+      "note": "You will hear dental assistants say this repeatedly throughout your cleaning or procedure."
+    },
+    {
+      "id": "20261119-5",
+      "thai": "ถอน",
+      "phonetic": "thɔ̌ɔn",
+      "tones": [
+        "rising"
+      ],
+      "english": "to extract / pull out",
+      "category": "verb",
+      "example": {
+        "thai": "ฟันคุดซี่นี้ต้องถอนไหมครับ",
+        "phonetic": "fan-khút sîi níi dtɔ̂ɔng thɔ̌ɔn mǎi khráp",
+        "english": "Does this wisdom tooth need to be extracted?"
+      },
+      "note": "Pair it with ฟัน (tooth) as ถอนฟัน; ฟันคุด (fan-khút) specifically refers to an impacted wisdom tooth."
+    }
+  ]
+}
