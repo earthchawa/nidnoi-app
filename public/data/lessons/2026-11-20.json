@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-20",
+  "theme": "Joining a Gym / Fitness Center",
+  "context": "At the gym",
+  "words": [
+    {
+      "id": "20261120-1",
+      "thai": "สมัคร",
+      "phonetic": "sa-màk",
+      "tones": [
+        "low",
+        "low"
+      ],
+      "english": "to apply / sign up",
+      "category": "Verb",
+      "example": {
+        "thai": "อยากสมัครฟิตเนสรายปีครับ",
+        "phonetic": "yàak sa-màk fít-nèt raai-bpii khráp",
+        "english": "I would like to sign up for an annual gym membership."
+      },
+      "note": "สมัคร (sa-màk) is used whenever you sign up or register for services, classes, bank accounts, or memberships."
+    },
+    {
+      "id": "20261120-2",
+      "thai": "สมาชิก",
+      "phonetic": "sa-maa-chík",
+      "tones": [
+        "low",
+        "mid",
+        "high"
+      ],
+      "english": "member / membership",
+      "category": "Noun",
+      "example": {
+        "thai": "มีค่าสมาชิกแรกเข้าไหมครับ",
+        "phonetic": "mii khâa sa-maa-chík râaek-khâo mǎi khráp",
+        "english": "Is there an initial joining fee?"
+      },
+      "note": "Pair it as ค่าสมาชิก (khâa sa-maa-chík) for 'membership fee'. แรกเข้า (râaek-khâo) refers to the one-time entry or registration fee."
+    },
+    {
+      "id": "20261120-3",
+      "thai": "รายเดือน",
+      "phonetic": "raai-dʉan",
+      "tones": [
+        "mid",
+        "mid"
+      ],
+      "english": "monthly / per month",
+      "category": "Adverb",
+      "example": {
+        "thai": "จ่ายแบบรายเดือนได้ไหมครับ",
+        "phonetic": "jàai bàeep raai-dʉan dâai mǎi khráp",
+        "english": "Can I pay on a monthly basis?"
+      },
+      "note": "Use ราย (raai) + period for recurring payment models: รายวัน (daily), รายเดือน (monthly), or รายปี (yearly)."
+    },
+    {
+      "id": "20261120-4",
+      "thai": "เทรนเนอร์",
+      "phonetic": "threen-nôoe",
+      "tones": [
+        "mid",
+        "falling"
+      ],
+      "english": "personal trainer",
+      "category": "Noun",
+      "example": {
+        "thai": "มีเทรนเนอร์ช่วยสอนออกกำลังกายไหม",
+        "phonetic": "mii threen-nôoe chûai sɔ̌ɔn ɔ̀ɔk-gam-lang-gaai mǎi",
+        "english": "Is there a trainer to help guide my workout?"
+      },
+      "note": "Borrowed straight from English. Add ส่วนตัว (sùan-dtua) to specify a private/personal trainer."
+    },
+    {
+      "id": "20261120-5",
+      "thai": "ล็อกเกอร์",
+      "phonetic": "lɔ́k-gôoe",
+      "tones": [
+        "high",
+        "falling"
+      ],
+      "english": "locker",
+      "category": "Noun",
+      "example": {
+        "thai": "ห้องล็อกเกอร์อยู่ทางไหนครับ",
+        "phonetic": "hɔ̂ng lɔ́k-gôoe yùu thaang nǎi khráp",
+        "english": "Which way is the locker room?"
+      },
+      "note": "Most gyms in Thailand have free lockers, but some require you to bring your own padlock or trade your ID card for an electronic key wristband."
+    }
+  ]
+}
