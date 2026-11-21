@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-21",
+  "theme": "Buying a SIM Card & Mobile Data",
+  "context": "At the mobile shop",
+  "words": [
+    {
+      "id": "20261121-1",
+      "thai": "เปิดเบอร์",
+      "phonetic": "pòət-bəə",
+      "tones": [
+        "low",
+        "mid"
+      ],
+      "english": "to activate a new number",
+      "category": "verb phrase",
+      "example": {
+        "thai": "อยากเปิดเบอร์ใหม่สำหรับใช้เน็ต",
+        "phonetic": "yàak pòət-bəə mài sǎm-ràp chái nét",
+        "english": "I'd like to activate a new number for data use."
+      },
+      "note": "Used when buying a new SIM card or setting up a mobile line from scratch."
+    },
+    {
+      "id": "20261121-2",
+      "thai": "เติมเงิน",
+      "phonetic": "təəm-ŋən",
+      "tones": [
+        "mid",
+        "mid"
+      ],
+      "english": "to top up credit",
+      "category": "verb phrase",
+      "example": {
+        "thai": "ช่วยเติมเงินเข้าเบอร์นี้ให้หน่อยครับ",
+        "phonetic": "chûai təəm-ŋən khâo bəə níi hâi nɔ̀ɔi khráp",
+        "english": "Could you please help top up balance onto this number?"
+      },
+      "note": "Prepaid SIMs in Thailand are called 'sím təəm-ŋən' (top-up SIM)."
+    },
+    {
+      "id": "20261121-3",
+      "thai": "ลงทะเบียน",
+      "phonetic": "loŋ-thá-bian",
+      "tones": [
+        "mid",
+        "high",
+        "mid"
+      ],
+      "english": "to register",
+      "category": "verb",
+      "example": {
+        "thai": "ต้องใช้พาสปอร์ตลงทะเบียนไหมครับ",
+        "phonetic": "tɔ̂ɔŋ chái phâat-spɔ̀ɔt loŋ-thá-bian mǎi khráp",
+        "english": "Do I need to use my passport to register?"
+      },
+      "note": "By Thai law, every SIM card must be registered with an official ID or passport before activation."
+    },
+    {
+      "id": "20261121-4",
+      "thai": "ไม่จำกัด",
+      "phonetic": "mâi-jam-kàt",
+      "tones": [
+        "falling",
+        "mid",
+        "low"
+      ],
+      "english": "unlimited",
+      "category": "adjective",
+      "example": {
+        "thai": "มีแพ็กเกจเน็ตไม่จำกัดความเร็วไหมครับ",
+        "phonetic": "mii phɛ́k-kèet nét mâi-jam-kàt khwaam-reo mǎi khráp",
+        "english": "Do you have an unlimited speed internet package?"
+      },
+      "note": "Look for this keyword on promo boards alongside 'mâi-lót-sà-pìit' (no speed drop/throttling)."
+    },
+    {
+      "id": "20261121-5",
+      "thai": "สัญญาณ",
+      "phonetic": "sǎn-yaan",
+      "tones": [
+        "rising",
+        "mid"
+      ],
+      "english": "reception / signal",
+      "category": "noun",
+      "example": {
+        "thai": "ค่ายไหนมีสัญญาณชัดที่สุดในต่างจังหวัด",
+        "phonetic": "khâai nǎi mii sǎn-yaan chát thîi-sùt nai tàaŋ-jaŋ-wàt",
+        "english": "Which carrier has the strongest signal upcountry?"
+      },
+      "note": "Use 'mâi mii sǎn-yaan' when you find yourself in a dead zone with no reception."
+    }
+  ]
+}
