@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-22",
+  "theme": "Riding the BTS & MRT",
+  "context": "At the train station",
+  "words": [
+    {
+      "id": "20261122-1",
+      "thai": "สถานี",
+      "phonetic": "sà-thǎa-nii",
+      "tones": [
+        "low",
+        "rising",
+        "mid"
+      ],
+      "english": "station",
+      "category": "Noun",
+      "example": {
+        "thai": "สถานีต่อไปคืออโศก",
+        "phonetic": "sà-thǎa-nii dtɔ̀ɔ-bpai khʉʉ à-sòok",
+        "english": "The next station is Asok."
+      },
+      "note": "Train automated announcements always begin with 'สถานีต่อไป' (The next station is...) followed by the station name in Thai and English."
+    },
+    {
+      "id": "20261122-2",
+      "thai": "ชานชาลา",
+      "phonetic": "chaan-chaa-laa",
+      "tones": [
+        "mid",
+        "mid",
+        "mid"
+      ],
+      "english": "platform",
+      "category": "Noun",
+      "example": {
+        "thai": "รถไฟขบวนนี้เข้าชานชาลาไหน",
+        "phonetic": "rót-fai khà-buan níi khâo chaan-chaa-laa nǎi",
+        "english": "Which platform does this train arrive at?"
+      },
+      "note": "BTS and MRT platform signs show numbers (e.g., ชานชาลา 1 or 2) pointing toward the direction of travel."
+    },
+    {
+      "id": "20261122-3",
+      "thai": "เปลี่ยนสาย",
+      "phonetic": "plìan-sǎai",
+      "tones": [
+        "low",
+        "rising"
+      ],
+      "english": "to transfer lines",
+      "category": "Verb",
+      "example": {
+        "thai": "เราต้องไปเปลี่ยนสายที่สยาม",
+        "phonetic": "rao dtɔ̂ng bpai plìan-sǎai thîi sà-yǎam",
+        "english": "We have to transfer lines at Siam."
+      },
+      "note": "Siam is Bangkok's most famous cross-platform transfer station between the BTS Sukhumvit and Silom lines."
+    },
+    {
+      "id": "20261122-4",
+      "thai": "ทางออก",
+      "phonetic": "thaang-ɔ̀ɔk",
+      "tones": [
+        "mid",
+        "low"
+      ],
+      "english": "exit",
+      "category": "Noun",
+      "example": {
+        "thai": "ห้างอยู่ใกล้ทางออกหนึ่ง",
+        "phonetic": "hâang yùu glâi thaang-ɔ̀ɔk nʉ̀ng",
+        "english": "The shopping mall is near exit 1."
+      },
+      "note": "Always check station area maps for the specific exit number, as taking the wrong exit can leave you on the wrong side of busy multi-lane roads."
+    },
+    {
+      "id": "20261122-5",
+      "thai": "ปลายทาง",
+      "phonetic": "bplaai-thaang",
+      "tones": [
+        "mid",
+        "mid"
+      ],
+      "english": "terminus, final destination",
+      "category": "Noun",
+      "example": {
+        "thai": "รถไฟขบวนนี้มีปลายทางที่คูคต",
+        "phonetic": "rót-fai khà-buan níi mii bplaai-thaang thîi khuukót",
+        "english": "This train terminates at Khu Khot."
+      },
+      "note": "Bangkok trains display their final terminus station on front windshields and overhead signs to help you confirm you are boarding in the correct direction."
+    }
+  ]
+}
