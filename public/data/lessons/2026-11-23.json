@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-23",
+  "theme": "Plumbing & Water Issues",
+  "context": "Reporting home plumbing issues",
+  "words": [
+    {
+      "id": "20261123-1",
+      "thai": "ท่อ",
+      "phonetic": "thɔ̂ɔ",
+      "tones": [
+        "falling"
+      ],
+      "english": "pipe / drain",
+      "category": "noun",
+      "example": {
+        "thai": "ท่อระบายน้ำมีกลิ่นเหม็นมาก",
+        "phonetic": "thɔ̂ɔ rá-baai náam mii glìn měn mâak",
+        "english": "The drainage pipe smells very bad."
+      },
+      "note": "Combine with other words to specify: 'ท่อระบายน้ำ' (drain pipe) or 'ท่อน้ำทิ้ง' (waste water pipe)."
+    },
+    {
+      "id": "20261123-2",
+      "thai": "รั่ว",
+      "phonetic": "rûa",
+      "tones": [
+        "falling"
+      ],
+      "english": "to leak / leaky",
+      "category": "verb",
+      "example": {
+        "thai": "มีน้ำรั่วมาจากเพดาน",
+        "phonetic": "mii náam rûa maa jàak phee-daan",
+        "english": "Water is leaking down from the ceiling."
+      },
+      "note": "Use 'น้ำรั่ว' (water leak) when explaining sudden pipe bursts or damp patches to your landlord."
+    },
+    {
+      "id": "20261123-3",
+      "thai": "ตัน",
+      "phonetic": "tan",
+      "tones": [
+        "mid"
+      ],
+      "english": "clogged / blocked",
+      "category": "adjective",
+      "example": {
+        "thai": "ชักโครกกดไม่ลง สงสัยจะตัน",
+        "phonetic": "chák-khrôok gòt mâi long, sǒng-sǎi jà tan",
+        "english": "The toilet won't flush down, I suspect it's clogged."
+      },
+      "note": "Pair it directly with fixtures: 'ท่อตัน' (clogged pipe) or 'ส้วมตัน' (clogged toilet)."
+    },
+    {
+      "id": "20261123-4",
+      "thai": "ก๊อกน้ำ",
+      "phonetic": "gɔ́k-náam",
+      "tones": [
+        "high",
+        "high"
+      ],
+      "english": "faucet / water tap",
+      "category": "noun",
+      "example": {
+        "thai": "ช่วยปิดวาล์วก่อน ก๊อกน้ำปิดไม่สนิท",
+        "phonetic": "chûai bpìt waao gɔ̀ɔn, gɔ́k-náam bpìt mâi sà-nìt",
+        "english": "Please shut the valve first; the tap won't close completely."
+      },
+      "note": "'ก๊อก' is borrowed from Dutch 'kok' via seafaring trade, paired with 'น้ำ' for water tap."
+    },
+    {
+      "id": "20261123-5",
+      "thai": "ซ่อม",
+      "phonetic": "sɔ̂ɔm",
+      "tones": [
+        "falling"
+      ],
+      "english": "to repair / to fix",
+      "category": "verb",
+      "example": {
+        "thai": "สะดวกให้เข้ามาซ่อมกี่โมงครับ",
+        "phonetic": "sà-dùak hâi khâo maa sɔ̂ɔm gìi moong khráp",
+        "english": "What time is convenient for you to come in and fix it?"
+      },
+      "note": "Crucial verb for condo living. Often paired with 'ด่วน' (sɔ̂ɔm dùan) to request urgent repairs."
+    }
+  ]
+}
