@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-24",
+  "theme": "Opening a Bank Account",
+  "context": "At the bank",
+  "words": [
+    {
+      "id": "20261124-1",
+      "thai": "บัญชี",
+      "phonetic": "bun-chii",
+      "tones": [
+        "mid",
+        "mid"
+      ],
+      "english": "bank account",
+      "category": "Noun",
+      "example": {
+        "thai": "อยากเปิดบัญชีใหม่ครับ",
+        "phonetic": "yàak pɤ̀ɤt bun-chii mài kráp",
+        "english": "I would like to open a new bank account."
+      },
+      "note": "Most expats open a savings account (บัญชีออมทรัพย์) first, which usually comes with a mobile banking app."
+    },
+    {
+      "id": "20261124-2",
+      "thai": "เอกสาร",
+      "phonetic": "èek-ká-sǎan",
+      "tones": [
+        "low",
+        "high",
+        "rising"
+      ],
+      "english": "documents / paperwork",
+      "category": "Noun",
+      "example": {
+        "thai": "ต้องใช้เอกสารอะไรบ้างครับ",
+        "phonetic": "tɔ̂ɔng chái èek-ká-sǎan a-rai bâang kráp",
+        "english": "What documents do I need to use?"
+      },
+      "note": "Banks usually require a passport, work permit, or lease agreement to open an account for foreigners."
+    },
+    {
+      "id": "20261124-3",
+      "thai": "ฝาก",
+      "phonetic": "fàak",
+      "tones": [
+        "low"
+      ],
+      "english": "to deposit (money)",
+      "category": "Verb",
+      "example": {
+        "thai": "ต้องการฝากเงินเข้าบัญชีครับ",
+        "phonetic": "tɔ̂ɔng-kaan fàak ngɤn khâo bun-chii kráp",
+        "english": "I want to deposit money into the account."
+      },
+      "note": "Combined with เงิน (ngɤn - money), ฝากเงิน means 'to deposit cash'."
+    },
+    {
+      "id": "20261124-4",
+      "thai": "โอน",
+      "phonetic": "oon",
+      "tones": [
+        "mid"
+      ],
+      "english": "to transfer (money)",
+      "category": "Verb",
+      "example": {
+        "thai": "โอนเงินผ่านแอปได้ไหมครับ",
+        "phonetic": "oon ngɤn phàan áep dâi mài kráp",
+        "english": "Can I transfer money via the app?"
+      },
+      "note": "PromptPay QR code transfers are the most popular payment method across Thailand."
+    },
+    {
+      "id": "20261124-5",
+      "thai": "บัตรเดบิต",
+      "phonetic": "bàt-dee-bìt",
+      "tones": [
+        "low",
+        "mid",
+        "low"
+      ],
+      "english": "debit card",
+      "category": "Noun",
+      "example": {
+        "thai": "อยากทำบัตรเดบิตด้วยครับ",
+        "phonetic": "yàak tham bàt-dee-bìt dûai kráp",
+        "english": "I would also like to get a debit card."
+      },
+      "note": "Thai debit cards usually carry an annual fee (around 200–300 THB) charged directly from your account."
+    }
+  ]
+}
