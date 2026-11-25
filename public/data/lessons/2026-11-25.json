@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-25",
+  "theme": "Grocery Shopping at the Supermarket",
+  "context": "At the supermarket",
+  "words": [
+    {
+      "id": "20261125-1",
+      "thai": "อยู่ตรงไหน",
+      "phonetic": "yùu trong nǎi",
+      "tones": [
+        "low",
+        "mid",
+        "rising"
+      ],
+      "english": "where is it located?",
+      "category": "Question",
+      "example": {
+        "thai": "นมสดอยู่ตรงไหนครับ",
+        "phonetic": "nom sòt yùu trong nǎi khráp",
+        "english": "Where is the fresh milk located?"
+      },
+      "note": "Place the item name right before 'yùu trong nǎi' to ask store staff where an item is located."
+    },
+    {
+      "id": "20261125-2",
+      "thai": "แผนก",
+      "phonetic": "pha-naek",
+      "tones": [
+        "low",
+        "low"
+      ],
+      "english": "section / department",
+      "category": "Noun",
+      "example": {
+        "thai": "แผนกผักสดอยู่ที่ไหนครับ",
+        "phonetic": "pha-naek phàk sòt yùu thîi nǎi khráp",
+        "english": "Where is the fresh produce section?"
+      },
+      "note": "Supermarkets use this word to organize areas like fresh produce, dairy, or frozen food."
+    },
+    {
+      "id": "20261125-3",
+      "thai": "หมด",
+      "phonetic": "mòt",
+      "tones": [
+        "low"
+      ],
+      "english": "out of stock / run out",
+      "category": "Adjective",
+      "example": {
+        "thai": "สินค้านี้หมดแล้วหรือครับ",
+        "phonetic": "sĭn-kháa níi mòt lᴂ́ᴂw rŭu khráp",
+        "english": "Is this item out of stock already?"
+      },
+      "note": "'Mòt' literally means finished or depleted; staff will use it when shelf stock is gone."
+    },
+    {
+      "id": "20261125-4",
+      "thai": "ลดราคา",
+      "phonetic": "lót raa-khaa",
+      "tones": [
+        "high",
+        "mid",
+        "mid"
+      ],
+      "english": "on sale / discounted",
+      "category": "Verb",
+      "example": {
+        "thai": "อันนี้ลดราคาไหมครับ",
+        "phonetic": "an níi lót raa-khaa măi khráp",
+        "english": "Is this item on sale?"
+      },
+      "note": "Look for yellow or red stickers with 'lót raa-khaa' in Thai supermarkets for daily deals."
+    },
+    {
+      "id": "20261125-5",
+      "thai": "รถเข็น",
+      "phonetic": "rót-khĕn",
+      "tones": [
+        "high",
+        "rising"
+      ],
+      "english": "shopping cart / trolley",
+      "category": "Noun",
+      "example": {
+        "thai": "จุดคืนรถเข็นอยู่ทางโน้น",
+        "phonetic": "jùt khuen rót-khĕn yùu thaang nóon",
+        "english": "The trolley return point is over there."
+      },
+      "note": "Use 'rót-khĕn' for a shopping cart/trolley, and 'ta-kráa' (ตะกร้า) for a handheld basket."
+    }
+  ]
+}
