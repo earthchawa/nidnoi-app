@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-26",
+  "theme": "At the Cinema",
+  "context": "At the cinema",
+  "words": [
+    {
+      "id": "20261126-1",
+      "thai": "โรงหนัง",
+      "phonetic": "roong-năng",
+      "tones": [
+        "mid",
+        "rising"
+      ],
+      "english": "cinema / movie theater",
+      "category": "Nouns",
+      "example": {
+        "thai": "โรงหนัง นี้ อยู่ ชั้น ไหน",
+        "phonetic": "roong-năng níi yùu chán năi",
+        "english": "Which floor is the cinema on?"
+      },
+      "note": "In Thailand, Major Cineplex and SF Cinema are the two largest movie theater chains."
+    },
+    {
+      "id": "20261126-2",
+      "thai": "รอบ",
+      "phonetic": "rôop",
+      "tones": [
+        "falling"
+      ],
+      "english": "showtime / session",
+      "category": "Nouns",
+      "example": {
+        "thai": "รอบ ต่อไป กี่ โมง",
+        "phonetic": "rôop tòo-pai kèi moong",
+        "english": "What time is the next showtime?"
+      },
+      "note": "You can check showtimes easily on cinema mobile apps before arriving at the theater."
+    },
+    {
+      "id": "20261126-3",
+      "thai": "แถว",
+      "phonetic": "thăew",
+      "tones": [
+        "rising"
+      ],
+      "english": "row / line",
+      "category": "Nouns",
+      "example": {
+        "thai": "ขอ ที่นั่ง แถว หลัง",
+        "phonetic": "khŏo thîi-nâng thăew lăng",
+        "english": "I would like seats in the back row."
+      },
+      "note": "Cinema rows in Thailand are lettered from front (A) to back."
+    },
+    {
+      "id": "20261126-4",
+      "thai": "ซับไทย",
+      "phonetic": "sáp-thai",
+      "tones": [
+        "high",
+        "mid"
+      ],
+      "english": "Thai subtitles",
+      "category": "Nouns",
+      "example": {
+        "thai": "เรื่อง นี้ มี ซับไทย ไหม",
+        "phonetic": "rêueang níi mee sáp-thai măi",
+        "english": "Does this movie have Thai subtitles?"
+      },
+      "note": "Foreign films in major Thai cities are often shown in original audio with Thai subtitles (ST/TH)."
+    },
+    {
+      "id": "20261126-5",
+      "thai": "พากย์ไทย",
+      "phonetic": "phâak-thai",
+      "tones": [
+        "falling",
+        "mid"
+      ],
+      "english": "dubbed in Thai",
+      "category": "Verbs",
+      "example": {
+        "thai": "หนัง เรื่อง นี้ พากย์ไทย",
+        "phonetic": "năng rêueang níi phâak-thai",
+        "english": "This movie is dubbed in Thai."
+      },
+      "note": "Look for 'TH' on showtime screens if a movie is dubbed in Thai, or 'Soundtrack' if it has original audio."
+    }
+  ]
+}
