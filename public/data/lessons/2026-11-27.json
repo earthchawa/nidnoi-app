@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-27",
+  "theme": "Extending Visa at Immigration",
+  "context": "At immigration",
+  "words": [
+    {
+      "id": "20261127-1",
+      "thai": "ต่ออายุ",
+      "phonetic": "tɔ̀ɔ-aa-yú",
+      "tones": [
+        "low",
+        "mid",
+        "high"
+      ],
+      "english": "to renew / extend",
+      "category": "Verb",
+      "example": {
+        "thai": "ต้องการมาต่ออายุวีซ่าครับ",
+        "phonetic": "tɔ̂ng-kaan maa tɔ̀ɔ-aa-yú wii-sâa khráp",
+        "english": "I would like to extend my visa."
+      },
+      "note": "Literally means 'extend age'. Used for extending visas, driver's licenses, and passports."
+    },
+    {
+      "id": "20261127-2",
+      "thai": "ยื่น",
+      "phonetic": "yʉ̂n",
+      "tones": [
+        "falling"
+      ],
+      "english": "to submit / hand in",
+      "category": "Verb",
+      "example": {
+        "thai": "ต้องยื่นแบบฟอร์มที่ช่องไหนครับ",
+        "phonetic": "tɔ̂ng yʉ̂n bæ̀æp-fɔɔm thîi chɔ̂ng nǎi khráp",
+        "english": "Which counter should I submit the application form at?"
+      },
+      "note": "Used when physically handing over documents or applications to an officer."
+    },
+    {
+      "id": "20261127-3",
+      "thai": "คิว",
+      "phonetic": "khiw",
+      "tones": [
+        "mid"
+      ],
+      "english": "queue / queue number",
+      "category": "Noun",
+      "example": {
+        "thai": "รอเรียกคิวที่ด้านในครับ",
+        "phonetic": "rɔɔ rîak khiw thîi dâan-nai khráp",
+        "english": "Please wait to be called by your queue number inside."
+      },
+      "note": "Borrowed from English 'queue'. 'บัตรคิว' (bàt khiw) is the ticket paper showing your queue number."
+    },
+    {
+      "id": "20261127-4",
+      "thai": "รูปถ่าย",
+      "phonetic": "rûup-thàay",
+      "tones": [
+        "falling",
+        "low"
+      ],
+      "english": "photo / photograph",
+      "category": "Noun",
+      "example": {
+        "thai": "ใช้รูปถ่ายขนาดสองนิ้วสองใบ",
+        "phonetic": "chái rûup-thàay khà-nàat sɔ̌ɔng níw sɔ̌ɔng bai",
+        "english": "Use two 2-inch photos."
+      },
+      "note": "Thai official forms usually require physical passport-sized photos with a white or blue background."
+    },
+    {
+      "id": "20261127-5",
+      "thai": "ค่าธรรมเนียม",
+      "phonetic": "khâa-tham-niam",
+      "tones": [
+        "falling",
+        "mid",
+        "mid"
+      ],
+      "english": "official fee / processing fee",
+      "category": "Noun",
+      "example": {
+        "thai": "ชำระค่าธรรมเนียมที่นี่ใช่ไหมครับ",
+        "phonetic": "cham-rá khâa-tham-niam thîi-nîi châi mái khráp",
+        "english": "Do I pay the official fee here?"
+      },
+      "note": "Refers specifically to official government or administrative service fees, often payable in cash only."
+    }
+  ]
+}
