@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-28",
+  "theme": "Checking In at a Hotel",
+  "context": "At the hotel front desk",
+  "words": [
+    {
+      "id": "20261128-1",
+      "thai": "จอง",
+      "phonetic": "jaawng",
+      "tones": [
+        "mid"
+      ],
+      "english": "to book / reserve",
+      "category": "Verb",
+      "example": {
+        "thai": "ผมจองไว้ในชื่อ จอห์น สมิธ ครับ",
+        "phonetic": "phǒm jaawng wái nai chêuu Jawn Sa-mít khráp",
+        "english": "I have a reservation under the name John Smith."
+      },
+      "note": "If you booked online via Agoda or Booking.com, you can also say 'จองผ่านแอปมา' (booked through an app)."
+    },
+    {
+      "id": "20261128-2",
+      "thai": "เช็คอิน",
+      "phonetic": "chék-in",
+      "tones": [
+        "high",
+        "mid"
+      ],
+      "english": "to check in",
+      "category": "Verb",
+      "example": {
+        "thai": "ขอเช็คอินก่อนเวลาได้ไหมครับ",
+        "phonetic": "khǎaw chék-in gàawn wee-laa dâi mǎi khráp",
+        "english": "Can I check in early?"
+      },
+      "note": "Standard check-in time in Thailand is usually 2:00 PM (บ่ายสอง), but most hotels will hold your luggage for free if you arrive early."
+    },
+    {
+      "id": "20261128-3",
+      "thai": "คีย์การ์ด",
+      "phonetic": "khii-gàat",
+      "tones": [
+        "mid",
+        "low"
+      ],
+      "english": "keycard",
+      "category": "Noun",
+      "example": {
+        "thai": "ขอคีย์การ์ดเพิ่มอีกหนึ่งใบได้ไหมครับ",
+        "phonetic": "khǎaw khii-gàat phôoem èek nèung bai dâi mǎi khráp",
+        "english": "Could I please get one extra keycard?"
+      },
+      "note": "Most Thai hotels issue only one card to control room power; asking for an extra one with 'ขอเพิ่ม' (may I have more) is common and accepted."
+    },
+    {
+      "id": "20261128-4",
+      "thai": "อาหารเช้า",
+      "phonetic": "aa-hǎan-cháo",
+      "tones": [
+        "mid",
+        "rising",
+        "high"
+      ],
+      "english": "breakfast",
+      "category": "Noun",
+      "example": {
+        "thai": "อาหารเช้าเริ่มกี่โมงครับ",
+        "phonetic": "aa-hǎan-cháo rôoem gèe moong khráp",
+        "english": "What time does breakfast start?"
+      },
+      "note": "Staff will usually point out the dining area (ห้องอาหาร) and meal hours upon check-in, typically 06:30 to 10:30."
+    },
+    {
+      "id": "20261128-5",
+      "thai": "รวม",
+      "phonetic": "ruam",
+      "tones": [
+        "mid"
+      ],
+      "english": "to include / included",
+      "category": "Verb",
+      "example": {
+        "thai": "ราคานี้รวมอาหารเช้าหรือยังครับ",
+        "phonetic": "raa-khaa née ruam aa-hǎan-cháo rěuu yang khráp",
+        "english": "Does this price include breakfast?"
+      },
+      "note": "Use 'รวม...หรือยัง' to confirm whether taxes, service charges, or breakfast are already covered in the quoted rate."
+    }
+  ]
+}
